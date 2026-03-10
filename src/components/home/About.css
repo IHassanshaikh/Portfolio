@@ -29,7 +29,7 @@
 }
 
 .about-title {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 6vw, 3.5rem);
     line-height: 1.1;
     font-weight: 800;
     margin-bottom: 2rem;

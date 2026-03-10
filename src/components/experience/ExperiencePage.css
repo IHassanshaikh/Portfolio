@@ -158,7 +158,15 @@
     }
 
     .timeline-item {
-        padding-left: 3rem;
+        padding-left: 2.5rem;
+    }
+
+    .timeline-content-card {
+        padding: 1.5rem;
+    }
+
+    .job-title {
+        font-size: 1.25rem;
     }
 }
 

@@ -58,11 +58,11 @@ h6 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(1rem, 5vw, 1.5rem);
 }
 
 .section-padding {
-  padding: 6rem 0;
+  padding: clamp(3rem, 10vh, 6rem) 0;
 }
 
 .text-red {
@@ -74,6 +74,18 @@ h6 {
 }
 
 /* Buttons */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s var(--ease-out-expo);
+  cursor: pointer;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -229,6 +241,8 @@ h6 {
 .hidden {
   display: none;
 }
+
+
 
 @media (min-width: 768px) {
   .md\:flex {
