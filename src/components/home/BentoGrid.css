@@ -395,11 +395,11 @@
     }
 
     .bento-title {
-        font-size: 5vw;
+        font-size: clamp(1.2rem, 5vw, 2rem);
     }
 
     .bento-subtitle {
-        font-size: 3.5vw;
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
     }
 
     .tech-badge {

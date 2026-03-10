@@ -58,6 +58,12 @@
     transition: transform 0.3s ease;
 }
 
+.navbar-logo img {
+    height: 32px !important;
+    /* Scaled down for mobile */
+    width: auto;
+}
+
 .navbar-logo:hover {
     transform: scale(1.05);
 }
@@ -190,13 +196,22 @@
     left: 0;
     right: 0;
     margin-top: 1rem;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0a0a0a;
+    /* Solid background to prevent overlap issues */
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 24px;
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem;
     z-index: 99;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 850px) {
+    .navbar-capsule {
+        background: rgba(10, 10, 10, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: calc(100% - 2rem) !important;
+        margin: 0 auto;
+    }
 }
 
 .mobile-nav-links {

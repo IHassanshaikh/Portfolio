@@ -31,9 +31,7 @@ export default function Hero() {
                     </div>
 
                     <h1 className="hero-title animate-fade-up delay-200">
-                        Crafting <span className="highlight-red">purpose driven</span> <br />
-                        <span className="highlight-red">experiences</span> that inspire <br />
-                        & engage.
+                        Crafting <span className="highlight-red">purpose driven experiences</span> that inspire & engage.
                     </h1>
                 </div>
                 <div className='herobottom-section'>
