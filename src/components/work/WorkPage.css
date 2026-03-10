@@ -1,0 +1,121 @@
+.work-page {
+    background: rgb(var(--background));
+    padding-bottom: 8rem;
+}
+
+.work-hero {
+    padding: 10rem 0 4rem;
+    text-align: center;
+}
+
+.work-hero h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    margin-bottom: 1.5rem;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 2rem;
+    border-radius: 99px;
+    border: 1px solid rgba(var(--border), 0.5);
+    background: transparent;
+    color: rgb(var(--muted));
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    border-color: rgb(var(--primary));
+    color: #fff;
+    background: rgba(var(--primary), 0.1);
+}
+
+.work-grid-unique {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 3rem;
+}
+
+.work-card-unique {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(var(--surface), 0.4);
+    border: 1px solid rgba(var(--border), 0.3);
+    transition: all 0.5s var(--ease-out-expo);
+}
+
+.work-card-unique:hover {
+    transform: translateY(-10px);
+    border-color: rgba(var(--primary), 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.work-card-image {
+    aspect-ratio: 16/10;
+    background: rgba(var(--background), 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.work-card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(var(--background), 0.8));
+    opacity: 0.5;
+}
+
+.work-card-info {
+    padding: 2.5rem;
+}
+
+.work-card-category {
+    font-size: 0.85rem;
+    color: rgb(var(--primary));
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.work-card-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.work-card-desc {
+    color: rgb(var(--muted));
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.work-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.work-card-tag {
+    font-size: 0.8rem;
+    color: rgb(var(--muted));
+    border: 1px solid rgba(var(--border), 0.5);
+    padding: 0.2rem 0.75rem;
+    border-radius: 99px;
+}
+
+@media (max-width: 768px) {
+    .work-grid-unique {
+        grid-template-columns: 1fr;
+    }
+}

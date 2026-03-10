@@ -1,0 +1,154 @@
+/* ExperienceList.css */
+.experience-list-section {
+    padding: 8vh 0;
+    position: relative;
+    background: transparent;
+}
+
+.exp-list-header {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.exp-list-eyebrow {
+    font-size: 0.875rem;
+    color: #DC2626;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.exp-list-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.exp-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
+    position: relative;
+}
+
+.exp-list-item {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.exp-logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.exp-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.exp-list-item:hover .exp-logo {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: #DC2626;
+}
+
+.exp-list-item::before {
+    content: '';
+    position: absolute;
+    left: -2.35rem;
+    /* Adjust based on padding/border width */
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: #DC2626;
+    border-radius: 50%;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+.exp-date {
+    font-size: 0.9rem;
+    color: rgb(var(--muted));
+    margin-bottom: 0.5rem;
+}
+
+.exp-role {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.exp-company {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #DC2626;
+    /* User theme red */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.exp-desc {
+    font-size: 1rem;
+    color: rgb(var(--muted));
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.exp-points {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.exp-points li {
+    font-size: 1rem;
+    color: rgb(var(--muted));
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    max-width: 650px;
+}
+
+.exp-points li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #DC2626;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .exp-list-title {
+        font-size: 2.5rem;
+    }
+
+    .exp-list-wrapper {
+        padding-left: 1.5rem;
+    }
+
+    .exp-list-item::before {
+        left: -1.85rem;
+    }
+}

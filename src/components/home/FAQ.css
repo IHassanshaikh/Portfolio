@@ -1,0 +1,118 @@
+/* FAQ.css */
+.faq-section {
+    padding: 10vh 0;
+    background: rgb(var(--surface));
+    /* Slightly different background */
+    border-top: 1px solid rgb(var(--border));
+    border-bottom: 1px solid rgb(var(--border));
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.faq-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: rgb(var(--background));
+    border: 1px solid rgb(var(--border));
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(var(--foreground));
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    color: rgb(var(--primary));
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: rgb(var(--muted));
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    padding-bottom: 1.5rem;
+    max-height: 200px;
+    /* Adjust as needed */
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    color: rgb(var(--primary));
+}
+
+@media (max-width: 768px) {
+    .faq-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* New FAQ CTA Styles */
+.faq-action {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.faq-action-text {
+    color: rgb(var(--muted));
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-faq-cta {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 1px solid rgb(var(--border));
+    background: transparent;
+    color: rgb(var(--foreground));
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-faq-cta:hover {
+    background: rgb(var(--foreground));
+    color: rgb(var(--background));
+    border-color: rgb(var(--foreground));
+    transform: translateY(-2px);
+}

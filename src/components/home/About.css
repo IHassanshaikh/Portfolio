@@ -1,0 +1,236 @@
+/* About.css */
+.about-section {
+    padding: 10vh 0;
+    background: rgb(var(--background));
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-content {
+    flex: 1;
+    z-index: 10;
+}
+
+.about-eyebrow {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgb(var(--muted));
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: rgb(var(--foreground));
+}
+
+.about-title .highlight {
+    background: linear-gradient(90deg, #DC2626, #B91C1C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-desc {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: rgb(var(--muted));
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.about-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    color: rgb(var(--muted));
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: rgb(var(--foreground));
+}
+
+.dive-deeper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    color: rgb(var(--foreground));
+    text-decoration: none;
+    font-size: 0.875rem;
+    border: 1px solid rgb(var(--border));
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
+.dive-deeper:hover {
+    background: rgb(var(--surface));
+}
+
+/* Right Side - Visuals */
+/* Right Side - Visuals - 3D Rotating Carousel */
+.about-visuals {
+    flex: 1;
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    /* Allow 3D elements to spin outside bounds if needed */
+}
+
+.carousel-3d-container {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.carousel-3d-spinner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotateCarousel 20s linear infinite;
+}
+
+@keyframes rotateCarousel {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Pause on hover for better visibility */
+.carousel-3d-spinner:hover {
+    animation-play-state: paused;
+}
+
+
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: #000;
+    /* Box shadow to giving depth */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Backface visibility: usually hidden, but we want to see them as they turn? 
+       Actually with 3 items in a triangle, backface hidden is safer to avoid weird overlaps, 
+       but if they are single sided, let's keep visible. */
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+    3 Items Arrangement:
+    360 / 3 = 120 degrees apart.
+    Distance (TranslateZ):
+    Width = 300px.
+    tan(60) = (Width/2) / Z
+    1.732 * Z = 150
+    Z = 150 / 1.732 = ~86px.
+    This is too close (they will intersect).
+    Let's push them out further to create a gap.
+    TranslateZ = 250px.
+*/
+
+.item-1 {
+    transform: rotateY(0deg) translateZ(250px);
+}
+
+.item-2 {
+    transform: rotateY(120deg) translateZ(250px);
+}
+
+.item-3 {
+    transform: rotateY(240deg) translateZ(250px);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .carousel-3d-container {
+        width: 200px;
+        height: 300px;
+        /* Scale down */
+    }
+
+    .item-1 {
+        transform: rotateY(0deg) translateZ(110px);
+    }
+
+    .item-2 {
+        transform: rotateY(120deg) translateZ(110px);
+    }
+
+    .item-3 {
+        transform: rotateY(240deg) translateZ(110px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-visuals {
+        width: 100%;
+        height: 400px;
+        margin-top: 2rem;
+    }
+
+    .visual-card-wrapper {
+        width: 80vw;
+        height: 60vh;
+        transform: none;
+        /* Simplify for mobile */
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-socials {
+        justify-content: center;
+    }
+}

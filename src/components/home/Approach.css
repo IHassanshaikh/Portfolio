@@ -1,0 +1,243 @@
+/* Approach.css */
+.approach-section {
+    position: relative;
+    background: rgb(var(--background));
+    padding: 10vh 0;
+}
+
+.approach-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4vw;
+    display: flex;
+    align-items: stretch;
+    /* Required for sticky scrolling to work */
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.approach-content {
+    width: 40%;
+    padding-right: 2rem;
+}
+
+.approach-text-block {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.8s ease;
+    opacity: 0.1;
+}
+
+.approach-text-block.active {
+    opacity: 1;
+}
+
+.approach-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.approach-desc {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 480px;
+}
+
+.approach-visuals {
+    width: 60%;
+    position: relative;
+    /* height: 100%; removed to let flex stretch handle it safely */
+}
+
+.visuals-sticky-wrapper {
+    width: 100%;
+    height: 75vh;
+    position: sticky;
+    top: 12.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Corrected to align pill properly relative to container */
+    overflow: visible;
+}
+
+.visual-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.visual-content-placeholder {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.approach-cta-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.btn-approach-cta {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: #DC2626;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.5);
+}
+
+.btn-approach-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -10px rgba(220, 38, 38, 0.6);
+    background: #b91c1c;
+}
+
+.approach-box-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.approach-box {
+    border-radius: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    width: 700px;
+    height: 430px;
+    padding: 50px 30px;
+    display: flex;
+    position: absolute;
+    left: 0;
+}
+
+.approach-box-heading {
+    width: 100%;
+    color: #000 !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+.approach-box-content .arrow {
+    color: #000 !important;
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+/* ====== STACK HOVER (CLEAN FINAL) ====== */
+
+.approach-images-container {
+    perspective: 1000px;
+    width: 90%;
+    height: auto;
+    transform-style: preserve-3d;
+    margin: auto;
+    position: relative;
+}
+
+.backimg,
+.frontimg {
+    pointer-events: none;
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.8s ease;
+    border-radius: 16px 16px 0 0;
+}
+
+/* default */
+.frontimg {
+    transform: translate3d(0, 0, 100px) rotate(0deg) scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+.backimg {
+    opacity: .6;
+    z-index: 1;
+    transform: translate3d(-63px, 30px, 0) rotate(0) scale(.9);
+}
+
+/* hover - 3D Swap Animation */
+.approach-box:hover .backimg {
+    transform: translate3d(10px, -20px, 150px) rotate(9deg) scale(.9);
+    opacity: 1;
+    z-index: 3;
+}
+
+.approach-box:hover .frontimg {
+    transform: translate3d(-50px, 40px, -50px) rotate(-15deg) scale(0);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+/* Active card floating animation */
+.approach-box[style*="opacity: 1"] {
+    animation: floatActiveCard 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatActiveCard {
+    from {
+        transform: translateY(0) rotateX(0deg);
+    }
+
+    to {
+        transform: translateY(-10px) rotateX(2deg);
+    }
+}
+
+.object-cover {
+    position: relative !important;
+}
+
+.approach-images-container img {
+    border-radius: 16px 16px 0 0;
+}
+
+.approach-box {
+    transform: translateZ(0);
+    will-change: opacity;
+}
+
+@media (max-width: 768px) {
+    .approach-container {
+        flex-direction: column-reverse;
+    }
+
+    .approach-content,
+    .approach-visuals {
+        width: 100%;
+    }
+
+    .approach-text-block {
+        height: auto;
+        padding: 4rem 0;
+        min-height: auto;
+    }
+
+    .approach-visuals {
+        display: none;
+    }
+}

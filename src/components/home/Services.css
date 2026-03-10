@@ -1,0 +1,93 @@
+/* Services.css */
+.services-section {
+    padding: 10vh 0;
+    background: rgb(var(--background));
+    position: relative;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.services-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.services-grid {
+    gap: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--border));
+    border-radius: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 260px;
+    padding: 1.5rem;
+    transition: all .3s;
+    display: flex;
+    width: 200px;
+}
+
+.service-card:hover {
+    border-color: rgb(var(--primary));
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: rgb(var(--primary));
+    margin-bottom: 1.5rem;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: rgb(var(--foreground));
+}
+
+.service-desc {
+    color: rgb(var(--muted));
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* NEW CTA STYLES */
+.services-action {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.btn-service-cta {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: #DC2626;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.5);
+}
+
+.btn-service-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -10px rgba(220, 38, 38, 0.6);
+    background: #b91c1c;
+}

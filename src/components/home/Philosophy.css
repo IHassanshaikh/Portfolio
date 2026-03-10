@@ -1,0 +1,49 @@
+/* Philosophy.css */
+.philosophy-section {
+    min-height: 80vh;
+    /* Make it tall enough to scroll through */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(var(--background));
+    position: relative;
+    padding: 10vw;
+}
+
+.philosophy-content {
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+    text-align: center;
+    max-width: 80vw;
+}
+
+.philosophy-text {
+    font-size: 2.5rem;
+    /* Drastically reduced from 5vw */
+    line-height: 1.4;
+    font-weight: 700;
+    color: rgb(var(--foreground));
+}
+
+@media (min-width: 1200px) {
+    .philosophy-text {
+        font-size: 3.5rem;
+    }
+}
+
+.philosophy-text .word {
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .philosophy-section {
+        min-height: 100vh;
+        padding: 5vw;
+    }
+
+    .philosophy-text {
+        font-size: 8vw;
+    }
+}

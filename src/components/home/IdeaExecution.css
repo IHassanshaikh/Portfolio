@@ -1,0 +1,140 @@
+/* IdeaExecution.css */
+.idea-execution-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #000;
+    overflow: hidden;
+    padding: 10vh 2rem;
+}
+
+/* Fluid/Abstract Background effect - simplified for performance */
+.idea-execution-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    z-index: 0;
+}
+
+.idea-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Floating Logo or Badge at Top */
+.idea-logo {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 4rem;
+    letter-spacing: -2px;
+}
+
+/* Main Typography */
+.idea-heading {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.idea-heading span {
+    display: block;
+    color: rgb(var(--muted));
+    font-size: 0.5em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.idea-cta-wrapper {
+    margin: 4rem 0;
+    position: relative;
+}
+
+.idea-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 99px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.idea-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Rotating "Open to Work" Badge */
+.rotating-badge {
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 150px;
+    height: 150px;
+    animation: rotate 10s linear infinite;
+    will-change: transform;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.badge-text {
+    fill: #DC2626;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Footer Info */
+.idea-footer-info {
+    margin-top: 6rem;
+    color: rgb(var(--muted));
+    font-size: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.idea-footer-info strong {
+    color: #fff;
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .rotating-badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0 auto 2rem auto;
+    }
+}
