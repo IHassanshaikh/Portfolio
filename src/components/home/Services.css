@@ -42,6 +42,14 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%;
+        height: auto;
+        min-height: 160px;
+    }
+}
+
 .service-icon {
     font-size: 2rem;
     color: rgb(var(--primary));
