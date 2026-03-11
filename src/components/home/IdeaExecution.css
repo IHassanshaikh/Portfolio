@@ -42,7 +42,7 @@
 
 /* Main Typography */
 .idea-heading {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.2rem, 8vw, 5rem);
     font-weight: 900;
     line-height: 1.1;
     color: #fff;
@@ -132,11 +132,22 @@
 }
 
 @media (max-width: 768px) {
+    .idea-heading {
+        font-size: 2.5rem;
+    }
+
     .rotating-badge {
         position: relative;
         top: 0;
         right: 0;
         margin: 0 auto 2rem auto;
+        width: 120px;
+        height: 120px;
+    }
+
+    .rotating-badge svg {
+        width: 120px;
+        height: 120px;
     }
 }
 

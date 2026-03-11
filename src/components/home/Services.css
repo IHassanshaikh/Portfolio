@@ -92,19 +92,23 @@
     background: #b91c1c;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 640px) {
     .services-header {
         margin-bottom: 3rem;
     }
 
     .services-header h2 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+    }
+
+    .services-grid {
+        gap: 1.5rem;
     }
 
     .service-card {
         width: 100%;
         height: auto;
-        min-height: 220px;
+        min-height: 180px;
         padding: 1.25rem;
     }
 
