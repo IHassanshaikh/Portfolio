@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FpsMonitorLoader from '@/components/ui/FpsMonitorLoader';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const cinzel = Cinzel({ subsets: ["latin"], variable: '--font-cinzel' });
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <SpeedInsights />
         {/* Diagnostic FPS monitor - enable by setting `window.__ENABLE_FPS = true` in the console */}
         <FpsMonitorLoader />
       </body>
