@@ -145,9 +145,8 @@ export default function Approach() {
                                             src={item.backImage}
                                             alt={`${item.title} Detail`}
                                             fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                                             className="object-cover"
-                                            priority={idx < 2}
                                         />
                                     </div>
 
@@ -160,9 +159,8 @@ export default function Approach() {
                                             src={item.frontImage}
                                             alt={`${item.title} Main`}
                                             fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                                             className="object-cover aproach-img-main"
-                                            priority={idx < 2}
                                         />
                                     </div>
                                 </div>

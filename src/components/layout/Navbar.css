@@ -42,6 +42,23 @@
     }
 }
 
+@media (max-width: 320px) {
+    .navbar-container {
+        top: 0.75rem;
+        padding: 0 0.75rem;
+    }
+
+    .navbar-capsule {
+        width: 100% !important;
+        border-radius: 16px;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .navbar-logo img {
+        height: 28px !important;
+    }
+}
+
 .desktop-only {
     display: flex;
 }
@@ -126,28 +143,28 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 50%;
     height: 100%;
     background: linear-gradient(90deg,
             transparent,
             rgba(255, 255, 255, 0.6),
             transparent);
-    transform: skewX(-20deg);
+    transform: skewX(-20deg) translateX(-200%);
     animation: shimmer 3s infinite;
 }
 
 @keyframes shimmer {
     0% {
-        left: -100%;
+        transform: skewX(-20deg) translateX(-200%);
     }
 
     20% {
-        left: 200%;
+        transform: skewX(-20deg) translateX(300%);
     }
 
     100% {
-        left: 200%;
+        transform: skewX(-20deg) translateX(300%);
     }
 }
 

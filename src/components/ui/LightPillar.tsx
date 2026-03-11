@@ -55,6 +55,8 @@ const LightPillar = ({
     }, []);
 
     useEffect(() => {
+        // Allow quick-disable for heavy WebGL animations during debugging
+        if (typeof window !== 'undefined' && (window as any).__DISABLE_ANIMATIONS) return;
         if (!containerRef.current || !webGLSupported) return;
 
         const container = containerRef.current;

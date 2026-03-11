@@ -39,6 +39,10 @@ export default function Process() {
     const cardsRef = useRef<HTMLDivElement[]>([]);
 
     useGSAP(() => {
+        // Allow quick disable for debugging scroll jank
+        if (typeof window !== 'undefined' && (window as any).__DISABLE_GSAP) {
+            return;
+        }
         const cards = cardsRef.current;
         const totalCards = cards.length;
 

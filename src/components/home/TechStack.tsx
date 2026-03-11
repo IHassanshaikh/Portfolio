@@ -32,15 +32,19 @@ const technologies = [
     { name: 'Bootstrap', icon: <SiBootstrap /> },
 ];
 
+import Image from 'next/image';
+
 export default function TechStack() {
     return (
         <section className="techstack-section">
             <div className="techstack-container">
 
                 <div className="abstract-element">
-                    <img
-                        src="https://cdn.dribbble.com/users/1770290/screenshots/6154339/dark-sphere-dribbble.png"
+                    <Image
+                        src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                         alt="Abstract Magic"
+                        width={400}
+                        height={400}
                         className="abstract-image"
                     />
                 </div>

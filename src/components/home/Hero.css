@@ -11,8 +11,33 @@
     z-index: 20;
 }
 
-.hero-container {
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    /* Place behind content but potentially above basic background */
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(6, 4, 4, 0.2) 0%,
+            rgba(6, 4, 4, 0.6) 50%,
+            rgba(6, 4, 4, 0.8) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Ensure container is above background */
+.hero-container {
+    position: relative;
+    z-index: 10;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 4vw;
@@ -319,5 +344,33 @@
 
     .hero-middle-row {
         padding: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-section {
+        padding-top: clamp(80px, 12vh, 100px);
+    }
+
+    .hero-container {
+        gap: 1.5rem;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-desc {
+        font-size: 13px;
+    }
+
+    .btn-know-me,
+    .btn-resume {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
     }
 }

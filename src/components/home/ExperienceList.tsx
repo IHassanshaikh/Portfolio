@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import './ExperienceList.css';
+import Image from 'next/image';
 
 export default function ExperienceList() {
     return (
@@ -16,7 +17,13 @@ export default function ExperienceList() {
                     <div className="exp-list-item">
                         <div className="exp-date">2025 - Present</div>
                         <div className="exp-logo">
-                            <img src="/assets/logos/tidetechlogo.png" alt="Tech Tide LLC Logo" />
+                            <Image
+                                src="/assets/logos/tidetechlogo.png"
+                                alt="Tech Tide LLC Logo"
+                                width={60}
+                                height={60}
+                                priority
+                            />
                         </div>
                         <div className="exp-details">
                             <h3 className="exp-role">Full-Stack & AI Automation Developer</h3>
@@ -35,7 +42,12 @@ export default function ExperienceList() {
                     <div className="exp-list-item">
                         <div className="exp-date">2024 - 2025</div>
                         <div className="exp-logo">
-                            <img src="/assets/logos/fiverr_com_logo.jfif" alt="Fiverr Logo" />
+                            <Image
+                                src="/assets/logos/fiverr_com_logo.jfif"
+                                alt="Fiverr Logo"
+                                width={60}
+                                height={60}
+                            />
                         </div>
                         <div className="exp-details">
                             <h3 className="exp-role">Web Developer (Freelancer)</h3>
@@ -52,7 +64,12 @@ export default function ExperienceList() {
                     <div className="exp-list-item">
                         <div className="exp-date">2023 - 2025</div>
                         <div className="exp-logo">
-                            <img src="/assets/logos/web_whiz_logo.jfif" alt="Web Whiz Logo" />
+                            <Image
+                                src="/assets/logos/web_whiz_logo.jfif"
+                                alt="Web Whiz Logo"
+                                width={60}
+                                height={60}
+                            />
                         </div>
                         <div className="exp-details">
                             <h3 className="exp-role">Web Developer</h3>
@@ -69,7 +86,12 @@ export default function ExperienceList() {
                     <div className="exp-list-item">
                         <div className="exp-date">2022 - 2023</div>
                         <div className="exp-logo">
-                            <img src="/assets/logos/codealpha.jfif" alt="CodeAlpha Logo" />
+                            <Image
+                                src="/assets/logos/codealpha.jfif"
+                                alt="CodeAlpha Logo"
+                                width={60}
+                                height={60}
+                            />
                         </div>
                         <div className="exp-details">
                             <h3 className="exp-role">Frontend Developer Intern</h3>
@@ -85,7 +107,12 @@ export default function ExperienceList() {
                     <div className="exp-list-item">
                         <div className="exp-date">2021 - 2022</div>
                         <div className="exp-logo">
-                            <img src="/assets/logos/akber_ali_sons_logo.jfif" alt="Akbar Ali & Sons Logo" />
+                            <Image
+                                src="/assets/logos/akber_ali_sons_logo.jfif"
+                                alt="Akbar Ali & Sons Logo"
+                                width={60}
+                                height={60}
+                            />
                         </div>
                         <div className="exp-details">
                             <h3 className="exp-role">Employee</h3>
@@ -103,7 +130,12 @@ export default function ExperienceList() {
                     <div className="exp-list-item">
                         <div className="exp-date">2022 - 2026</div>
                         <div className="exp-logo">
-                            <img src="/assets/logos/iqra%20uni%20logo.jfif" alt="Iqra University Logo" />
+                            <Image
+                                src="/assets/logos/iqra uni logo.jfif"
+                                alt="Iqra University Logo"
+                                width={60}
+                                height={60}
+                            />
                         </div>
                         <div className="exp-details">
                             <h3 className="exp-role">Bachelor of Science in Computer Science (BSCS)</h3>

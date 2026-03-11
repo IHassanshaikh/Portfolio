@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import Image from 'next/image';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -11,7 +11,6 @@ export default function Navbar() {
     const { scrollY } = useScroll();
 
     // Transform scroll to a numeric width value (80 -> 65)
-    // Increased range to 800px so it reacts over a longer scroll distance
     const widthRaw = useTransform(scrollY, [0, 800], [80, 65]);
 
     // Softer spring physics for a very smooth, fluid inertia feel
@@ -22,7 +21,7 @@ export default function Navbar() {
     });
 
     // Convert numeric value back to percentage string
-    const width = useTransform(smoothWidth, isNaN => `${isNaN}%`);
+    const width = useTransform(smoothWidth, (val) => `${val}%`);
 
     const navItems = [
         { name: 'Home', path: '/' },
@@ -40,7 +39,14 @@ export default function Navbar() {
             >
                 {/* Logo */}
                 <Link href="/" className="navbar-logo">
-                    <img src="/assets/logos/logomain.png" alt="Logo" style={{ height: '40px', width: 'auto' }} />
+                    <Image
+                        src="/assets/logos/logomain.png"
+                        alt="Logo"
+                        width={120}
+                        height={40}
+                        style={{ height: '40px', width: 'auto' }}
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Navigation Links */}

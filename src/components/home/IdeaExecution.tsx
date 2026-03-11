@@ -2,13 +2,20 @@
 import React from 'react';
 import './IdeaExecution.css';
 import { BsArrowRight } from 'react-icons/bs';
+import Image from 'next/image';
 
 export default function IdeaExecution() {
     return (
         <section className="idea-execution-section">
             <div className="idea-content">
                 <div className="idea-logo">
-                    <img src="/assets/logos/logomain.png" alt="Logo" style={{ height: '80px', width: 'auto' }} />
+                    <Image
+                        src="/assets/logos/logomain.png"
+                        alt="Logo"
+                        width={200}
+                        height={80}
+                        style={{ height: '80px', width: 'auto' }}
+                    />
                 </div>
 
                 <div className="idea-cta-wrapper">

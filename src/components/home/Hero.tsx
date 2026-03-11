@@ -1,42 +1,29 @@
 'use client';
 import React from 'react';
-import LightPillar from '../ui/LightPillar';
 import './Hero.css';
-import { FiArrowUpRight, FiLinkedin, FiGithub, FiInstagram, FiMail } from 'react-icons/fi';
+import FloatingLines from '../ui/FloatingLines';
+import { FiArrowUpRight } from 'react-icons/fi';
 
 export default function Hero() {
     return (
         <section className="hero-section">
-
-            {/* Background - Light Pillar (Restored to Red) */}
-            <div className="hero-background">
-                <LightPillar
-                    topColor="#000000"
-                    bottomColor="#DC2626"
-                    intensity={1.1}
-                    mixBlendMode="normal"
-                    pillarRotation={24}
-                    interactive={false}
-                />
-            </div>
-
             <div className="hero-container">
                 <div className="hero-top">
                     <div className="hero-intro animate-fade-up">
                         <span className="hand-wave-red">👋</span> Hey! It's me Muhammad Hassan,
                     </div>
 
-                    <div className="hero-subtitle animate-fade-up delay-100">
+                    <div className="hero-subtitle animate-fade-up">
                         Full-Stack Developer | AI Automation Engineer | Software Innovator
                     </div>
 
-                    <h1 className="hero-title animate-fade-up delay-200">
+                    <h1 className="hero-title animate-fade-up">
                         Crafting <span className="highlight-red">purpose driven experiences</span> that inspire & engage.
                     </h1>
                 </div>
                 <div className='herobottom-section'>
                     {/* Line + Description Row */}
-                    <div className="hero-middle-row animate-fade-up delay-250">
+                    <div className="hero-middle-row animate-fade-up">
                         <div className="hero-horizontal-line"></div>
                         <p className="hero-desc">
                             I work with businesses and startups globally to build scalable, pixel-perfect, and high-performance digital solutions. My focus is on developing modern web platforms, automation systems, and AI-powered tools that improve efficiency and help companies grow.
@@ -44,7 +31,7 @@ export default function Hero() {
                     </div>
 
                     {/* Footer Row: Socials on left, Buttons on right */}
-                    <div className="hero-footer-row animate-fade-up delay-280">
+                    <div className="hero-footer-row animate-fade-up">
                         <div className="social-links">
                             <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="social-link">Linkedin <FiArrowUpRight className="social-arrow" /></a>
                             <a href="https://github.com/mhassan9717" target="_blank" rel="noopener noreferrer" className="social-link">Github <FiArrowUpRight className="social-arrow" /></a>
@@ -62,6 +49,19 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className="hero-background">
+                <FloatingLines
+                    enabledWaves={["top", "middle", "bottom"]}
+                    lineCount={[5]}
+                    lineDistance={[5]}
+                    bendRadius={5}
+                    bendStrength={-0.5}
+                    interactive={true}
+                    parallax={true}
+                    linesGradient={['#DC2626', '#8B0000', 'rgba(0, 0, 0, 1)']}
+                />
             </div>
 
             {/* Bottom Marquee/Ticker */}

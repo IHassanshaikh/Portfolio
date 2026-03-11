@@ -93,6 +93,7 @@
     height: 150px;
     animation: rotate 10s linear infinite;
     will-change: transform;
+    transform: translateZ(0);
 }
 
 @keyframes rotate {
@@ -137,4 +138,9 @@
         right: 0;
         margin: 0 auto 2rem auto;
     }
+}
+
+/* Pause heavy animations during user scroll to improve scroll performance */
+.is-scrolling .rotating-badge {
+    animation-play-state: paused !important;
 }

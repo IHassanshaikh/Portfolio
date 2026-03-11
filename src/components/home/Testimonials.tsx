@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Testimonials.css';
 import { FiArrowLeft, FiArrowRight, FiArrowUpRight, FiStar } from 'react-icons/fi';
+import Image from 'next/image';
 
 const testimonials = [
     {
@@ -89,9 +90,11 @@ export default function Testimonials() {
                             className="testimonial-card-active fade-in"
                         >
                             <div className="t-author-header">
-                                <img
+                                <Image
                                     src={activeTestimonial.avatar}
                                     alt={activeTestimonial.name}
+                                    width={60}
+                                    height={60}
                                     className="t-avatar"
                                 />
                                 <div className="t-author-info">

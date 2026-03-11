@@ -3,6 +3,7 @@ import React from 'react';
 import './About.css';
 import { FiMove, FiGithub, FiLinkedin, FiInstagram, FiTwitter } from 'react-icons/fi';
 import { BsArrowRight } from 'react-icons/bs';
+import Image from 'next/image';
 
 export default function About() {
     return (
@@ -43,15 +44,39 @@ export default function About() {
                         <div className="carousel-3d-spinner">
                             {/* Image 1 */}
                             <div className="carousel-item item-1">
-                                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Mountain View" />
+                                <Image
+                                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+                                    alt="Mountain View"
+                                    width={400}
+                                    height={500}
+                                    sizes="(max-width: 768px) 100vw, 400px"
+                                    style={{ objectFit: 'cover' }}
+                                    priority={false}
+                                />
                             </div>
                             {/* Image 2 */}
                             <div className="carousel-item item-2">
-                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Coding Setup" />
+                                <Image
+                                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+                                    alt="Coding Setup"
+                                    width={400}
+                                    height={500}
+                                    sizes="(max-width: 768px) 100vw, 400px"
+                                    style={{ objectFit: 'cover' }}
+                                    priority={false}
+                                />
                             </div>
                             {/* Image 3 */}
                             <div className="carousel-item item-3">
-                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Technology" />
+                                <Image
+                                    src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+                                    alt="Technology"
+                                    width={400}
+                                    height={500}
+                                    sizes="(max-width: 768px) 100vw, 400px"
+                                    style={{ objectFit: 'cover' }}
+                                    priority={false}
+                                />
                             </div>
                         </div>
                     </div>

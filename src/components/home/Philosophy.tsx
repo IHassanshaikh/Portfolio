@@ -12,6 +12,10 @@ export default function Philosophy() {
     const textRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
+        // Allow quick disable for debugging scroll jank
+        if (typeof window !== 'undefined' && (window as any).__DISABLE_GSAP) {
+            return;
+        }
         // Split text logic could be added here, but for simplicity we'll use opacity on spans
         if (textRef.current) {
             gsap.fromTo(textRef.current,

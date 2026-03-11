@@ -710,3 +710,21 @@
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 320px) {
+    .profile-container { padding: 0 0.5rem; }
+    .linkedin-card { border-radius: 0; margin-left: -0.5rem; margin-right: -0.5rem; }
+    .profile-avatar-overlap { width: 120px; height: 120px; top: 130px; }
+    .profile-main-info { padding: 60px 16px 16px; }
+    .profile-name-text { font-size: 20px; }
+    .profile-headline-text { font-size: 14px; }
+    .header-actions { flex-direction: column; }
+    .action-pill { width: 100%; text-align: center; }
+}
+
+@media (max-width: 600px) {
+    .linkedin-list-item { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .item-logo { width: 40px; height: 40px; }
+    .item-meta-row { flex-direction: column; gap: 2px; }
+    .item-meta { font-size: 12px; }
+    .experience-skill-tag { width: 100%; justify-content: flex-start; }
+}
