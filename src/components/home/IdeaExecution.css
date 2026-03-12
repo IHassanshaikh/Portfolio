@@ -62,6 +62,8 @@
 .idea-cta-wrapper {
     margin: 4rem 0;
     position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
 }
 
 .idea-btn {

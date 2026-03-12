@@ -5,6 +5,7 @@
     /* Slightly different background */
     border-top: 1px solid rgb(var(--border));
     border-bottom: 1px solid rgb(var(--border));
+    overflow: hidden;
 }
 
 .faq-header {

@@ -20,7 +20,7 @@
     height: 100%;
     pointer-events: none;
     z-index: 1;
-    /* Place behind content but potentially above basic background */
+    overflow: hidden;
 }
 
 .hero-background::after {
@@ -67,14 +67,14 @@
 
 .hero-subtitle {
     color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
     letter-spacing: 0.02em;
     text-transform: none;
     opacity: 1;
-    margin-bottom: 60px;
+    font-size: 13px; /* Reduced from 16px to be small */
+    font-weight: 500;
     font-family: var(--font-unbounded);
+    margin-bottom: 60px;
+    font-style: oblique;
 }
 
 .hero-title {
@@ -139,7 +139,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    /* Spacing between line/desc and socials/btns */
+    width: 100%;
 }
 
 .hero-middle-row {
@@ -219,8 +219,7 @@
 
 /* Ticker Styles */
 .hero-ticker {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.02);

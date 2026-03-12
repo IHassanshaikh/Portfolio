@@ -1,11 +1,30 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './ExperienceList.css';
 import Image from 'next/image';
 
 export default function ExperienceList() {
+    const listRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleMouseMove = (e: MouseEvent) => {
+            if (!listRef.current) return;
+            const cards = listRef.current.querySelectorAll('.edu-card');
+            cards.forEach((card) => {
+                const rect = (card as HTMLElement).getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                (card as HTMLElement).style.setProperty('--mouse-x', `${x}px`);
+                (card as HTMLElement).style.setProperty('--mouse-y', `${y}px`);
+            });
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
+
     return (
-        <section className="experience-list-section">
+        <section className="experience-list-section" ref={listRef}>
             <div className="container">
                 <div className="exp-list-header">
                     <span className="exp-list-eyebrow">Career Path</span>
@@ -122,43 +141,60 @@ export default function ExperienceList() {
                 </div>
 
                 <div className="edu-list-header" style={{ marginTop: '5rem' }}>
-                    <span className="exp-list-eyebrow">Learning Journey</span>
+                    <span className="exp-list-eyebrow">Academic Foundation</span>
                     <h2 className="exp-list-title">Education</h2>
                 </div>
 
-                <div className="exp-list-wrapper">
-                    <div className="exp-list-item">
-                        <div className="exp-date">2022 - 2026</div>
-                        <div className="exp-logo">
-                            <Image
-                                src="/assets/logos/iqra uni logo.jfif"
-                                alt="Iqra University Logo"
-                                width={60}
-                                height={60}
-                            />
-                        </div>
-                        <div className="exp-details">
-                            <h3 className="exp-role">Bachelor of Science in Computer Science (BSCS)</h3>
-                            <div className="exp-company">Iqra University — Karachi</div>
-                            <p className="exp-desc">
-                                Current CGPA: 3.3 | Focus: Full-Stack Development, Software Engineering, Programming
+                <div className="edu-grid">
+                    <div className="edu-card">
+                        <div className="edu-card-glow"></div>
+                        <div className="edu-card-content">
+                            <div className="edu-header">
+                                <div className="edu-logo">
+                                    <Image
+                                        src="/assets/logos/iqra uni logo.jfif"
+                                        alt="Iqra University Logo"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
+                                <div className="edu-date">2022 - 2026</div>
+                            </div>
+                            <h3 className="edu-degree">Bachelor of Science in Computer Science</h3>
+                            <div className="edu-institution">Iqra University — Karachi</div>
+                            <div className="edu-stats">
+                                <div className="edu-stat">
+                                    <span className="stat-label">CGPA</span>
+                                    <span className="stat-value">3.3</span>
+                                </div>
+                                <div className="edu-stat">
+                                    <span className="stat-label">Focus</span>
+                                    <span className="stat-value">Full-Stack Dev</span>
+                                </div>
+                            </div>
+                            <p className="edu-desc">
+                                Specialized in Software Engineering and Modern Web Technologies.
                             </p>
                         </div>
                     </div>
 
-                    <div className="exp-list-item">
-                        <div className="exp-date">2024</div>
-                        <div className="exp-details">
-                            <h3 className="exp-role">AI & Chatbots Diploma</h3>
-                            <div className="exp-company">SMIT (Saylani Mass IT Training)</div>
+                    <div className="edu-card mini">
+                        <div className="edu-card-glow"></div>
+                        <div className="edu-card-content">
+                            <div className="edu-date">2024</div>
+                            <h3 className="edu-degree">AI & Chatbots Diploma</h3>
+                            <div className="edu-institution">SMIT (Saylani Mass IT Training)</div>
+                            <div className="edu-badge">Advanced Certification</div>
                         </div>
                     </div>
 
-                    <div className="exp-list-item">
-                        <div className="exp-date">2024</div>
-                        <div className="exp-details">
-                            <h3 className="exp-role">Web Development Course</h3>
-                            <div className="exp-company">AS Community HUB</div>
+                    <div className="edu-card mini">
+                        <div className="edu-card-glow"></div>
+                        <div className="edu-card-content">
+                            <div className="edu-date">2024</div>
+                            <h3 className="edu-degree">Web Development Course</h3>
+                            <div className="edu-institution">AS Community HUB</div>
+                            <div className="edu-badge">Skill Mastery</div>
                         </div>
                     </div>
                 </div>

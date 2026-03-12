@@ -24,20 +24,31 @@
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* html {
-  scroll-behavior: smooth; - Disabled to prevent conflict with GSAP ScrollTrigger
-} */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html,
 body {
   background: rgb(var(--background));
   color: rgb(var(--foreground));
   font-family: var(--font-sans);
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
+  max-width: 100%;
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
+
+/* html {
+  scroll-behavior: smooth; - Disabled to prevent conflict with GSAP ScrollTrigger
+} */
 
 /* Typography */
 h1,

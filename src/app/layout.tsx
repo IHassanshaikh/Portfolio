@@ -27,7 +27,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className={`${inter.variable} ${cinzel.variable} ${unbounded.variable} font-sans`}>
         <Navbar />
-        {children}
+        <div style={{ overflowX: 'hidden', width: '100%', position: 'relative' }}>
+          {children}
+        </div>
         <Footer />
         <SpeedInsights />
         {/* Diagnostic FPS monitor - enable by setting `window.__ENABLE_FPS = true` in the console */}
