@@ -1,0 +1,459 @@
+.approach-section {
+    position: relative;
+    background: rgb(var(--background));
+    padding: 8rem 0;
+}
+
+.approach-header-global {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4vw 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.approach-category-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgb(var(--primary));
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.approach-main-heading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    color: rgb(var(--foreground));
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.approach-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4vw;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.approach-content {
+    flex: 2;
+    padding-right: 2rem;
+}
+
+.approach-text-block {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.3;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px);
+}
+
+.approach-text-block.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.approach-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: rgb(var(--foreground));
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+.approach-desc {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(var(--foreground), 0.7);
+    max-width: 480px;
+}
+
+.approach-visuals {
+    flex: 3;
+    position: relative;
+}
+
+.visuals-sticky-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container {
+    position: relative;
+    width: 680px;
+    max-width: 90vw;
+    height: 520px;
+}
+
+.approach-box {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: 520px;
+    padding: 35px 25px 0 25px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -15px rgba(var(--background), 0.5);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.96);
+    transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+}
+
+.approach-box.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.approach-box-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.approach-box-heading {
+    width: 100%;
+    color: rgb(var(--background));
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.approach-box-content .arrow {
+    color: rgb(var(--background));
+    font-size: 1.5rem;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+.approach-images-container {
+    perspective: 1200px;
+    width: 100%;
+    height: 330px;
+    margin-top: auto;
+    position: relative;
+}
+
+.backimg,
+.frontimg {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.frontimg {
+    z-index: 2;
+    transform: translate3d(0, 0, 60px) scale(1);
+    opacity: 1;
+}
+
+.backimg {
+    z-index: 1;
+    transform: translate3d(-45px, 24px, 0) scale(0.9);
+    opacity: 0.65;
+}
+
+.approach-box:hover .backimg {
+    transform: translate3d(10px, -16px, 80px) rotate(7deg) scale(0.94);
+    opacity: 1;
+    z-index: 3;
+}
+
+.approach-box:hover .frontimg {
+    transform: translate3d(-35px, 28px, -20px) rotate(-10deg) scale(0.9);
+    opacity: 0.2;
+}
+
+.approach-card-img {
+    object-fit: contain;
+    object-position: top;
+}
+
+.approach-cta-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.btn-approach-cta {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: rgb(var(--primary));
+    color: rgb(var(--foreground));
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px -10px rgba(var(--primary), 0.5);
+}
+
+.btn-approach-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -10px rgba(var(--primary), 0.6);
+    background: rgb(var(--primary-dark));
+}
+
+@media (max-width: 1024px) {
+    .approach-container {
+        gap: 2.5rem;
+    }
+
+    .approach-title {
+        font-size: 3rem;
+    }
+
+    .cards-container {
+        width: 560px;
+        height: 470px;
+    }
+
+    .approach-box {
+        height: 470px;
+    }
+
+    .approach-images-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .approach-section {
+        padding: 10vh 0;
+    }
+
+    .approach-container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .approach-content,
+    .approach-visuals {
+        width: 100%;
+        flex: unset;
+        padding-right: 0;
+    }
+
+    .approach-text-block {
+        min-height: auto;
+        padding: 2rem 0;
+        opacity: 1;
+        transform: none;
+    }
+
+    .approach-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .approach-desc {
+        font-size: 1.05rem;
+        max-width: 100%;
+    }
+
+    .approach-visuals {
+        width: 100%;
+        flex: unset;
+        margin-top: 2rem;
+    }
+
+    .approach-cta-wrapper {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .approach-container {
+        padding: 0 1.25rem;
+    }
+
+    .approach-title {
+        font-size: 2rem;
+    }
+
+    .approach-desc {
+        font-size: 1rem;
+    }
+}
+
+/* See More Button */
+.approach-see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: rgb(var(--foreground));
+    border: 1px solid rgba(var(--foreground), 0.2);
+    border-radius: 99px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.approach-see-more-btn:hover {
+    background: rgba(var(--foreground), 0.1);
+    border-color: rgba(var(--foreground), 0.4);
+    transform: translateX(5px);
+}
+
+/* Modal Styles */
+.approach-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(var(--background), 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.approach-modal-content {
+    background: rgb(var(--surface));
+    border: 1px solid rgba(var(--foreground), 0.1);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.4s ease;
+    box-shadow: 0 25px 50px -12px rgba(var(--background), 0.5);
+}
+
+.approach-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(var(--foreground), 0.05);
+}
+
+.approach-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(var(--foreground));
+    margin: 0;
+}
+
+.approach-modal-close {
+    background: transparent;
+    border: none;
+    color: rgba(var(--foreground), 0.5);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.approach-modal-close:hover {
+    color: rgb(var(--foreground));
+}
+
+.approach-modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.approach-modal-project-card {
+    background: rgba(var(--foreground), 0.03);
+    border: 1px solid rgba(var(--foreground), 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.approach-modal-project-card:hover {
+    background: rgba(var(--foreground), 0.05);
+    transform: translateY(-4px);
+}
+
+.approach-project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(var(--foreground));
+    margin: 0 0 0.5rem 0;
+}
+
+.approach-project-desc {
+    font-size: 0.95rem;
+    color: rgba(var(--foreground), 0.6);
+    line-height: 1.5;
+    margin: 0 0 1.5rem 0;
+}
+
+.approach-project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.approach-project-tag {
+    font-size: 0.8rem;
+    color: #a3a3a3;
+    background: rgba(var(--foreground), 0.08);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .approach-modal-content {
+        max-height: 90vh;
+    }
+    .approach-modal-body {
+        grid-template-columns: 1fr;
+    }
+}

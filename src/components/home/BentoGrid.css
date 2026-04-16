@@ -1,0 +1,416 @@
+.bento-section {
+    padding: 4vw 0;
+    background-color: rgb(var(--background));
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bento-section .container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* --- Wrapper --- */
+.bento-wrapper {
+    display: flex;
+    gap: 1.5vw;
+    width: 100%;
+}
+
+/* --- Left Column (66%) --- */
+.bento-col-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    flex: 2;
+    /* Approx 2/3 */
+}
+
+/* Partnership Card */
+.card-partnership {
+    height: 18vw;
+    background: radial-gradient(circle at 50% 0%, rgba(var(--surface), 0.8), rgb(var(--surface)));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avatar-group-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.avatar-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.avatar-ring-large {
+    width: 14vw;
+    height: 14vw;
+    border: 1px solid rgba(var(--foreground), 0.1);
+    border-radius: 50%;
+    margin: 0 -3vw;
+    /* Negative margin for overlap */
+}
+
+.avatar-ring-center {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid rgba(var(--foreground), 0.2);
+    border-radius: 50%;
+    z-index: 10;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 4vw rgba(var(--background), 0.8);
+}
+
+.avatar-img-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    color: rgb(var(--foreground));
+    background: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80') center/cover;
+}
+
+/* Split Row */
+.bento-split-row {
+    display: flex;
+    gap: 1.5vw;
+    height: 22vw;
+    /* Fixed height for bottom row cards */
+}
+
+/* Map Card */
+.card-map {
+    flex: 1;
+    background: rgb(var(--surface));
+    overflow: hidden;
+}
+
+.genome-globe {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(var(--primary), 0.1) 0%, transparent 70%),
+        repeating-radial-gradient(rgba(var(--foreground), 0.1) 0, rgba(var(--foreground), 0.1) 2px, transparent 3px, transparent 10px);
+    position: absolute;
+    bottom: -15vw;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+.globe-pin {
+    width: 0.6vw;
+    height: 0.6vw;
+    background: rgb(var(--foreground));
+    border: 2px solid rgb(var(--primary));
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4vw;
+    left: 50%;
+    box-shadow: 0 0 1vw rgb(var(--primary));
+}
+
+.globe-pin-label {
+    position: absolute;
+    bottom: 2vw;
+    left: 48%;
+    font-size: 0.9vw;
+    font-weight: 700;
+}
+
+/* Connect Card */
+.card-connect {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-rs {
+    font-size: 3vw;
+    font-weight: 900;
+    color: rgb(var(--primary));
+    font-family: var(--font-cinzel);
+    /* Differentiate logo */
+    margin-bottom: 1vw;
+    display: block;
+    text-shadow: 0 0 2vw rgba(var(--primary), 0.5);
+}
+
+/* --- Right Column (33%) - Tech + Project Container --- */
+.card-tech-project {
+    flex: 1;
+    /* Approx 1/3 */
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Fill height of left col */
+    padding: 0 !important;
+    /* Reset padding for internal layout */
+    background: transparent !important;
+    border: none !important;
+    gap: 1.5vw;
+}
+
+/* Tech Section (Top Half of Right Column) */
+.tech-section {
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--border));
+    border-radius: 1.5vw;
+    padding: 2vw;
+    flex: 1;
+}
+
+/* Project Highlight Section (Bottom Half of Right Column) */
+.project-highlight-section {
+    background: rgb(var(--background));
+    border: 1px solid rgb(var(--border));
+    border-radius: 1.5vw;
+    padding: 0;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-mockup-card {
+    width: 70%;
+    background: rgb(var(--surface));
+    border-radius: 1vw 1vw 0 0;
+    border: 1px solid rgb(var(--border));
+    border-bottom: none;
+    position: relative;
+    z-index: 2;
+    margin-top: 2vw;
+    padding: 1vw;
+    box-shadow: 0 -1vw 3vw rgba(var(--background), 0.5);
+}
+
+.mockup-header {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    margin-bottom: 1.5vw;
+}
+
+.dots {
+    display: flex;
+    gap: 0.4vw;
+}
+
+.dot {
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 50%;
+}
+
+.dot-red {
+    background: #ff5f56;
+}
+
+.dot-yellow {
+    background: #ffbd2e;
+}
+
+.dot-green {
+    background: #27c93f;
+}
+
+.mockup-bar {
+    height: 0.6vw;
+    background: #333;
+    width: 60%;
+    border-radius: 1vw;
+}
+
+.mockup-body {
+    text-align: center;
+    padding-bottom: 1.5vw;
+}
+
+.glow-effect-red {
+    position: absolute;
+    bottom: -5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 10vw;
+    background: radial-gradient(circle, rgba(var(--primary), 0.4) 0%, transparent 70%);
+    z-index: 1;
+}
+
+/* --- Shared Card Styles --- */
+.bento-card {
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--border));
+    border-radius: 1.5vw;
+    padding: 2vw;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.bento-title {
+    font-size: 1.6vw;
+    font-weight: 700;
+    margin-bottom: 0.4vw;
+    color: rgb(var(--foreground));
+}
+
+.bento-subtitle {
+    font-size: 1vw;
+    color: rgb(var(--muted));
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8vw;
+    margin-top: 1.5vw;
+}
+
+.tech-badge {
+    padding: 0.5vw 1vw;
+    background: rgba(var(--foreground), 0.05);
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    color: rgb(var(--muted));
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    border: 1px solid rgb(var(--border));
+}
+
+/* --- Marquee --- */
+.marquee-container {
+    margin-top: 1.5vw;
+    display: flex;
+    background: rgb(var(--surface));
+    /* The bottom bar is usually a card itself in this design */
+    border: 1px solid rgb(var(--border));
+    border-radius: 2vw;
+    padding: 1.5vw 2vw;
+    align-items: center;
+    gap: 3vw;
+    overflow: hidden;
+    height: 8vw;
+}
+
+.marquee-item-static {
+    min-width: 20vw;
+}
+
+.marquee-scroll-area {
+    flex: 1;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 2vw;
+    animation: scrollLegit 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes scrollLegit {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+    .bento-wrapper {
+        flex-direction: column;
+    }
+
+    .bento-col-main,
+    .card-tech-project {
+        width: 100%;
+    }
+
+    .bento-split-row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-map,
+    .card-connect {
+        width: 100%;
+        height: 60vw;
+    }
+
+    .card-partnership {
+        height: 60vw;
+    }
+
+    .avatar-ring-large {
+        width: 30vw;
+        height: 30vw;
+        margin: 0 -8vw;
+    }
+
+    .avatar-ring-center {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .genome-globe {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .bento-title {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+
+    .bento-subtitle {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+    .tech-badge {
+        font-size: 3vw;
+        padding: 2vw;
+    }
+
+    .marquee-container {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+}

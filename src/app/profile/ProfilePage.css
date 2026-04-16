@@ -1,0 +1,730 @@
+/* Premium LinkedIn Clone Styles for Dark Theme Portfolio */
+
+.profile-page-root {
+    background: transparent;
+    padding-bottom: 5rem;
+    font-family: var(--font-sans);
+}
+
+.profile-container {
+    max-width: 1128px;
+    margin: 6rem auto 0;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1.5rem;
+}
+
+.linkedin-card {
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--border));
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-padding {
+    padding: 24px;
+}
+
+/* Header */
+.profile-banner-container {
+    height: 200px;
+    position: relative;
+    background: linear-gradient(90deg, #1d2226, #3b4249);
+}
+
+.header-edit-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #fff;
+    color: #0a66c2;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.profile-avatar-overlap {
+    position: absolute;
+    top: 110px;
+    left: 24px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid rgb(var(--background));
+    background: rgba(var(--foreground), 0.1);
+    overflow: hidden;
+    z-index: 5;
+}
+
+.avatar-opentowork-border {
+    position: absolute;
+    inset: -4px;
+    border: 8px solid #057642;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.opentowork-label {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #057642;
+    color: rgb(var(--foreground));
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.profile-main-info {
+    padding: 90px 24px 24px;
+}
+
+.profile-name-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile-name-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(var(--foreground));
+}
+
+.verification-badge {
+    color: #0a66c2;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    border: 1px dashed #0a66c2;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.profile-headline-text {
+    font-size: 16px;
+    color: rgb(var(--foreground));
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.profile-location-info {
+    font-size: 14px;
+    color: rgb(var(--muted));
+    margin-top: 8px;
+}
+
+.contact-info-link {
+    color: rgb(var(--primary));
+    font-weight: 600;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.github-link-row {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.github-link-row a {
+    color: rgb(var(--primary));
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.connections-link {
+    color: rgb(var(--primary));
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 8px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.action-pill {
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.action-pill.primary {
+    background: rgb(var(--primary));
+    color: rgb(var(--foreground));
+    border: none;
+}
+
+.action-pill.secondary {
+    background: transparent;
+    border: 1px solid rgb(var(--primary));
+    color: rgb(var(--primary));
+}
+
+.action-pill.tertiary {
+    background: transparent;
+    border: 1px solid #666;
+    color: rgb(var(--muted));
+}
+
+/* Info Boxes */
+.info-boxes-row {
+    display: flex;
+    gap: 12px;
+    padding: 16px 24px;
+    background: rgb(var(--surface));
+}
+
+.info-box {
+    flex: 1;
+    background: rgb(var(--background));
+    border: 1px solid rgb(var(--border));
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--background), 0.3);
+    border-color: #444;
+}
+
+.info-box.accent-blue {
+    border-left: 4px solid #0a66c2;
+}
+
+.info-box.accent-green {
+    border-left: 4px solid #057642;
+}
+
+.info-box-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.info-box-icon {
+    font-size: 20px;
+    color: rgb(var(--foreground));
+    background: rgba(var(--foreground), 0.05);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.accent-blue .info-box-icon {
+    color: #0a66c2;
+    background: rgba(10, 102, 194, 0.1);
+}
+
+.accent-green .info-box-icon {
+    color: #057642;
+    background: rgba(5, 118, 66, 0.1);
+}
+
+.info-box h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    color: rgb(var(--foreground));
+}
+
+.info-box-content {
+    margin-bottom: 12px;
+}
+
+.info-box-title {
+    font-size: 14px;
+    color: rgb(var(--foreground));
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.info-box-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.info-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(var(--foreground), 0.05);
+    color: rgb(var(--muted));
+    border: 1px solid rgba(var(--foreground), 0.15);
+}
+
+.accent-blue .info-tag {
+    color: #70b1ff;
+    border-color: rgba(10, 102, 194, 0.3);
+}
+
+.accent-green .info-tag {
+    color: #7edca1;
+    border-color: rgba(5, 118, 66, 0.3);
+}
+
+.info-box .show-details {
+    color: rgb(var(--primary));
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: color 0.2s;
+}
+
+.info-box .show-details:hover {
+    color: #ff6666;
+    text-decoration: underline;
+}
+
+.box-edit-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: rgb(var(--muted));
+    cursor: pointer;
+}
+
+/* Top Skills Box */
+.top-skills-box {
+    background: rgba(var(--primary), 0.05);
+    border: 1px solid rgba(var(--foreground), 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.top-skills-box:hover {
+    background: rgba(var(--primary), 0.1);
+}
+
+.top-skills-box h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.top-skills-list {
+    font-size: 14px;
+    color: rgb(var(--foreground));
+    font-weight: 500;
+}
+
+.top-skills-box .arrow-right {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(var(--muted));
+}
+
+/* Activity Filters */
+.activity-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.filter-pill {
+    padding: 6px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(var(--foreground), 0.1);
+    color: rgb(var(--muted));
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.filter-pill.active {
+    background: #057642;
+    /* LinkedIn Green for active */
+    color: rgb(var(--foreground));
+    border: none;
+}
+
+/* Post Styling */
+.post-item {
+    border-bottom: 1px solid rgba(var(--foreground), 0.1);
+    padding: 16px 0;
+}
+
+.post-item:last-child {
+    border-bottom: none;
+}
+
+.post-header {
+    font-size: 12px;
+    color: rgb(var(--muted));
+    margin-bottom: 8px;
+}
+
+.post-author-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+}
+
+.post-content-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(var(--foreground));
+}
+
+.show-more {
+    color: rgb(var(--muted));
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post-engagement {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: rgb(var(--muted));
+}
+
+.show-all-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    color: rgb(var(--muted));
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid rgba(var(--foreground), 0.1);
+}
+
+/* List Styling (Experience / Education) */
+.linkedin-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.linkedin-list-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(var(--foreground), 0.1);
+    transition: background 0.2s;
+}
+
+.linkedin-list-item:last-child {
+    border-bottom: none;
+}
+
+.linkedin-list-item:hover {
+    background: rgba(var(--foreground), 0.02);
+}
+
+.item-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: rgba(var(--foreground), 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(var(--foreground), 0.15);
+}
+
+.item-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.item-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(var(--foreground));
+    margin-bottom: 2px;
+}
+
+.item-subtitle {
+    display: block;
+    font-size: 14px;
+    color: rgb(var(--foreground));
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.item-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.item-meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    color: rgb(var(--muted));
+}
+
+.item-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(var(--muted));
+    margin-top: 8px;
+}
+
+.experience-skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 12px;
+    background: rgba(var(--foreground), 0.05);
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid rgba(var(--foreground), 0.1);
+    color: rgb(var(--foreground));
+    transition: all 0.2s;
+}
+
+.experience-skill-tag:hover {
+    background: rgba(var(--foreground), 0.1);
+    border-color: #444;
+}
+
+.experience-skill-tag svg {
+    color: rgb(var(--primary));
+}
+
+/* Sidebar Widgets */
+.sidebar-widget {
+    background: rgb(var(--surface));
+    border: 1px solid rgba(var(--foreground), 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 1rem;
+}
+
+.widget-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.widget-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(var(--foreground));
+}
+
+.widget-content-text {
+    font-size: 14px;
+    color: rgb(var(--muted));
+    margin-top: 4px;
+}
+
+.social-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgb(var(--foreground));
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.social-link-item:hover {
+    background: rgba(var(--foreground), 0.05);
+    color: rgb(var(--primary));
+}
+
+.social-link-item svg {
+    color: rgb(var(--muted));
+    transition: color 0.2s;
+}
+
+.social-link-item:hover svg {
+    color: rgb(var(--primary));
+}
+
+/* Job Search Widget (Promoted) */
+.job-search-widget {
+    background: #002233;
+    color: rgb(var(--foreground));
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.job-search-widget h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.job-search-widget .explore-jobs-btn {
+    display: inline-block;
+    background: #0a66c2;
+    color: rgb(var(--foreground));
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+/* Viewer Widget (People also viewed) */
+.viewer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.viewer-item {
+    display: flex;
+    gap: 12px;
+}
+
+.viewer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(var(--foreground), 0.1);
+    color: rgb(var(--foreground));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 1px solid rgba(var(--foreground), 0.1);
+}
+
+.viewer-info {
+    flex: 1;
+}
+
+.viewer-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(var(--foreground));
+    margin-bottom: 2px;
+}
+
+.viewer-info p {
+    font-size: 12px;
+    color: rgb(var(--muted));
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.connect-btn {
+    background: transparent;
+    border: 1px solid #aaa;
+    color: rgb(var(--muted));
+    padding: 2px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.connect-btn:hover {
+    background: rgba(var(--foreground), 0.05);
+    border-color: rgb(var(--foreground));
+    color: rgb(var(--foreground));
+}
+
+@media (max-width: 1024px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 320px) {
+    .profile-container { padding: 0 0.5rem; }
+    .linkedin-card { border-radius: 0; margin-left: -0.5rem; margin-right: -0.5rem; }
+    .profile-avatar-overlap { width: 120px; height: 120px; top: 130px; }
+    .profile-main-info { padding: 60px 16px 16px; }
+    .profile-name-text { font-size: 20px; }
+    .profile-headline-text { font-size: 14px; }
+    .header-actions { flex-direction: column; }
+    .action-pill { width: 100%; text-align: center; }
+}
+
+@media (max-width: 600px) {
+    .linkedin-list-item { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .item-logo { width: 40px; height: 40px; }
+    .item-meta-row { flex-direction: column; gap: 2px; }
+    .item-meta { font-size: 12px; }
+    .experience-skill-tag { width: 100%; justify-content: flex-start; }
+}
