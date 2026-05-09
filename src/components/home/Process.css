@@ -1,0 +1,68 @@
+/* Process.css */
+.process-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10vh;
+    background-color: rgb(var(--background));
+    overflow: hidden;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 5vh;
+    z-index: 10;
+}
+
+/* Reduced header sizes */
+.process-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.process-cards-container {
+    position: relative;
+    width: 30vw;
+    /* Smaller width container */
+    height: 50vh;
+    margin-top: 5vh;
+}
+
+.process-card {
+    will-change: transform, opacity;
+    position: absolute;
+    /* Essential for strict stacking */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(var(--surface));
+    border: 1px solid rgb(var(--border));
+    border-radius: 1.5vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(var(--background), 0.5);
+    /* transform-origin: center top; */
+}
+
+.card-icon-wrapper {
+    margin-bottom: 2vh;
+}
+
+/* Removed the massive VW fonts */
+
+@media (max-width: 768px) {
+    .process-cards-container {
+        width: 85vw;
+        height: 50vh;
+    }
+
+    .process-header h2 {
+        font-size: 2rem;
+    }
+}

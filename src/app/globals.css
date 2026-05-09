@@ -1,0 +1,367 @@
+:root {
+  /* Theme: Dark Red Premium */
+  --primary: 220, 38, 38;
+  /* Vibrant Red */
+  --primary-dark: 185, 28, 28;
+
+  --background: 6, 4, 4;
+  /* Near Black */
+  --surface: 23, 23, 23;
+  /* Dark Gray */
+  --foreground: 255, 255, 255;
+  /* White Text */
+  --muted: 163, 163, 163;
+  /* Light Gray for secondary text */
+  --border: 40, 40, 40;
+  /* Dark borders */
+
+  --font-unbounded: "Unbounded", sans-serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-sans: var(--font-unbounded);
+  --font-serif: var(--font-cinzel);
+
+  /* Animations */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+[data-theme='light'] {
+  /* Theme: Light Blue and White */
+  --primary: 59, 130, 246; /* Tailwind Blue 500 */
+  --primary-dark: 37, 99, 235; /* Tailwind Blue 600 */
+
+  --background: 255, 255, 255; /* Solid White */
+  --surface: 243, 244, 246; /* Gray 100 (visible box bg) */
+  --foreground: 10, 10, 10; /* Solid Black Text */
+  --muted: 100, 116, 139; /* Slate 500 (Gray text) */
+  --border: 209, 213, 219; /* Gray 300 (clear dark border) */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-sans);
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+/* html {
+  scroll-behavior: smooth; - Disabled to prevent conflict with GSAP ScrollTrigger
+} */
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  color: rgb(var(--foreground));
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.section-padding {
+  padding: clamp(3rem, 10vh, 6rem) 0;
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-padding {
+    padding: 2.5rem 0;
+  }
+}
+
+.text-red {
+  color: rgb(var(--primary));
+}
+
+.text-muted {
+  color: rgb(var(--muted));
+}
+
+/* Buttons */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s var(--ease-out-expo);
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s var(--ease-out-expo);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: rgb(var(--primary));
+  color: white;
+  box-shadow: 0 0 20px rgba(var(--primary), 0.4);
+  /* Glow effect for dark mode */
+}
+
+.btn-primary:hover {
+  background: rgb(var(--primary-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(var(--primary), 0.6);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgb(var(--border));
+  color: rgb(var(--foreground));
+}
+
+.btn-outline:hover {
+  border-color: rgb(var(--primary));
+  color: rgb(var(--primary));
+  background: rgba(var(--primary), 0.1);
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0.2;
+    /* Start with a faint visibility instead of 0 */
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s var(--ease-out-expo) forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Background Pattern */
+.dots-pattern {
+  background-image: radial-gradient(rgba(200, 200, 200, 0.4) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Navbar Utilities */
+.fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+  border-style: solid;
+}
+
+.border-white\/10 {
+  border-color: rgba(var(--foreground), 0.1);
+}
+
+.bg-black\/50 {
+  background-color: rgba(var(--background), 0.5);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-left {
+  object-position: left;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-gray-300 {
+  color: rgb(209, 213, 219);
+}
+
+.hover\:text-white:hover {
+  color: rgb(var(--foreground));
+}
+
+.bg-white {
+  background-color: rgb(var(--foreground));
+}
+
+.text-black {
+  color: rgb(var(--background));
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
+.transition-opacity {
+  transition: opacity 0.2s;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Font Utilities */
+.unbounded-default {
+  font-family: var(--font-unbounded);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.unbounded-bold {
+  font-family: var(--font-unbounded);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cinzel-default {
+  font-family: var(--font-cinzel);
+  font-weight: 400;
+}

@@ -1,0 +1,23 @@
+.light-pillar-fallback {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--background), 0.1);
+    color: #888;
+    font-size: 14px;
+    mix-blend-mode: var(--pillar-blend-mode, screen);
+}
+
+.light-pillar-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: var(--pillar-blend-mode, screen);
+}
