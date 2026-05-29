@@ -67,10 +67,18 @@
     overflow: hidden;
 }
 
-.work-card-placeholder-bg {
+.work-project-img {
     width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(var(--primary), 0.1) 0%, transparent 70%);
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 5s ease-in-out;
+}
+
+.work-card-unique:hover .work-project-img {
+    transform: translateY(calc(-100% + 280px)); /* 280px is approx the height based on 16/10 ratio and 450px min-width */
 }
 
 .work-card-image::after {
@@ -98,6 +106,16 @@
 .work-card-title {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+}
+
+.work-card-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.work-card-title a:hover {
+    color: rgb(var(--primary));
 }
 
 .work-card-desc {

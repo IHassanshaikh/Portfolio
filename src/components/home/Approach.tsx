@@ -84,7 +84,8 @@ export default function Approach() {
                                     style={{
                                         background: item.color,
                                         border: `1px solid ${item.borderColor}`,
-                                    }}
+                                        "--box-text-color": item.textColor,
+                                    } as React.CSSProperties}
                                 >
                                     <div className="approach-box-content">
                                         <h3 className="approach-box-heading">{item.description}</h3>

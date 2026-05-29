@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
 import './ScrollytellingHero.css';
 
 const FRAME_COUNT = 32;
@@ -13,20 +13,13 @@ function padFrame(n: number): string {
 const STORY_STEPS = [
     {
         start: 0,
-        end: 0.3,
+        end: 0.5,
         greeting: "👋 Hey! It's me Muhammad Hassan,",
         title: "Crafting <span class='scrolly-highlight'>purpose driven</span> experiences.",
         sub: "Full-Stack Developer · AI Automation Engineer"
     },
     {
-        start: 0.3,
-        end: 0.7,
-        greeting: "The Process,",
-        title: "Turning <span class='scrolly-highlight'>complex ideas</span> into elegant code.",
-        sub: "Bridging the gap between Innovation and Execution."
-    },
-    {
-        start: 0.7,
+        start: 0.5,
         end: 1,
         greeting: "Let's Connect,",
         title: "Building the <span class='scrolly-highlight'>future of tech</span> together.",
@@ -36,7 +29,7 @@ const STORY_STEPS = [
 
 export default function ScrollytellingHero() {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [currentFrame, setCurrentFrame] = useState(0);
+    const [currentFrame, setCurrentFrame] = useState(1);
     const [currentStep, setCurrentStep] = useState(0);
 
     const { scrollYProgress } = useScroll({
@@ -44,20 +37,36 @@ export default function ScrollytellingHero() {
         offset: ["start start", "end end"]
     });
 
+    // Smooth out the scroll progress
+    const smoothProgress = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
+
     // Map scroll progress to image scale (Zoom Out effect)
-    const imageScale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
-    const imageOpacity = useTransform(scrollYProgress, [0, 0.05, 0.9, 1], [1, 1, 1, 0]);
+    const imageScale = useTransform(smoothProgress, [0, 1], [1, 0.85]);
+    const imageOpacity = useTransform(smoothProgress, [0, 0.05, 0.9, 1], [1, 1, 1, 0]);
 
     useEffect(() => {
-        const unsubscribe = scrollYProgress.on('change', (latest) => {
-            // Update Frame
+        // Preload all frames for smooth animation
+        for (let i = 1; i <= FRAME_COUNT; i++) {
+            const img = new Image();
+            img.src = `/assets/frames/face-${padFrame(i)}.webp`;
+        }
+    }, []);
+
+    useEffect(() => {
+        const unsubscribe = smoothProgress.on('change', (latest) => {
+            // Update Frame Index in state
             const frameIdx = Math.min(
-                FRAME_COUNT - 1,
-                Math.floor(latest * FRAME_COUNT)
+                FRAME_COUNT,
+                Math.floor(latest * FRAME_COUNT) + 1
             );
+            
             setCurrentFrame(frameIdx);
 
-            // Update Text Step
+            // Update Text Step (keep in state for AnimatePresence)
             const stepIdx = STORY_STEPS.findIndex(
                 (step) => latest >= step.start && latest <= step.end
             );
@@ -65,10 +74,10 @@ export default function ScrollytellingHero() {
         });
 
         return () => unsubscribe();
-    }, [scrollYProgress]);
+    }, [smoothProgress]);
 
-    const frameSrc = `/assets/frames/face-${padFrame(currentFrame + 1)}.webp`;
     const step = STORY_STEPS[currentStep];
+    const frameSrc = `/assets/frames/face-${padFrame(currentFrame)}.webp`;
 
     return (
         <div ref={containerRef} className="scrolly-wrapper">
@@ -92,19 +101,45 @@ export default function ScrollytellingHero() {
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentStep}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: { 
+                                    opacity: 1,
+                                    transition: { staggerChildren: 0.15, delayChildren: 0.1 } 
+                                },
+                                exit: { opacity: 0, transition: { duration: 0.3 } }
+                            }}
+                            className="scrolly-text-inner"
                         >
-                            <p className="scrolly-greeting">
-                                <span className="scrolly-wave"></span> {step.greeting}
-                            </p>
-                            <h1 
+                            <motion.p 
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 }
+                                }}
+                                className="scrolly-greeting"
+                            >
+                                <span className="scrolly-wave">👋</span> {step.greeting.replace("👋 ", "")}
+                            </motion.p>
+                            <motion.h1 
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0 }
+                                }}
                                 className="scrolly-title"
                                 dangerouslySetInnerHTML={{ __html: step.title }}
                             />
-                            <p className="scrolly-sub">{step.sub}</p>
+                            <motion.p 
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 }
+                                }}
+                                className="scrolly-sub"
+                            >
+                                {step.sub}
+                            </motion.p>
                         </motion.div>
                     </AnimatePresence>
 

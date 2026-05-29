@@ -143,7 +143,7 @@
 
 .approach-box-heading {
     width: 100%;
-    color: rgb(var(--background));
+    color: var(--box-text-color, rgb(var(--background)));
     font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.2;
@@ -151,7 +151,7 @@
 }
 
 .approach-box-content .arrow {
-    color: rgb(var(--background));
+    color: var(--box-text-color, rgb(var(--background)));
     font-size: 1.5rem;
     opacity: 0.6;
     flex-shrink: 0;

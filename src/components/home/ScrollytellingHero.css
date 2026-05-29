@@ -8,6 +8,19 @@
     background: #070709;
 }
 
+.scrolly-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(80px);
+}
+
 .scrolly-sticky {
     position: sticky;
     top: 0;
@@ -31,6 +44,13 @@
     max-height: 85%;
     object-fit: contain;
     display: block;
+    /* Mask the bottom and right edges to hide watermark and blend with BG */
+    mask-image: linear-gradient(to bottom, black 70%, transparent 95%),
+                linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 95%),
+                        linear-gradient(to right, black 85%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
 }
 
 /* Dark gradient so text is readable — LEFT side only */
@@ -87,10 +107,12 @@
 }
 
 .scrolly-highlight {
-    background: linear-gradient(90deg, #DC2626, #8B0000);
+    background: linear-gradient(90deg, #FF3131, #8B0000);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+    font-weight: 800;
 }
 
 .scrolly-sub {

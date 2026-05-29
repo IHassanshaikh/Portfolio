@@ -3,49 +3,25 @@ import React, { useState } from 'react';
 import './WorkPage.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const projects = [
-    {
-        id: 1,
-        title: 'Quantum Dashboard',
-        category: 'Web',
-        desc: 'A real-time data visualization platform for quantum computing simulations.',
-        tags: ['Next.js', 'Three.js', 'WebSockets'],
-        image: '/assets/projects/p1.jpg'
-    },
-    {
-        id: 2,
-        title: 'Lumina Mobile',
-        category: 'Mobile',
-        desc: 'A wellness and mindfulness app with custom ambient soundscapes.',
-        tags: ['React Native', 'Firebase', 'Expo'],
-        image: '/assets/projects/p2.jpg'
-    },
-    {
-        id: 3,
-        title: 'Nexus Brand Identity',
-        category: 'Design',
-        desc: 'Complete brand redesign for a cutting-edge networking startup.',
-        tags: ['Figma', 'Illustrator', 'Motion Design'],
-        image: '/assets/projects/p3.jpg'
-    },
-    {
-        id: 4,
-        title: 'Aura E-commerce',
-        category: 'Web',
-        desc: 'A luxury fashion store with a focus on immersive editorial layouts.',
-        tags: ['Shopify', 'React', 'GSAP'],
-        image: '/assets/projects/p4.jpg'
-    }
-];
+import { specialtiesData } from '@/data/specialties';
 
-const categories = ['All', 'Web', 'Mobile', 'Design'];
+// Flatten all projects from specialtiesData into a single array
+const allProjects = specialtiesData.flatMap((specialty) => 
+    specialty.projects.map((project, pIdx) => ({
+        ...project,
+        id: `${specialty.slug}-${pIdx}`,
+        category: specialty.title, // Use specialty title as the category
+    }))
+);
+
+const categories = ['All', ...specialtiesData.map(s => s.title)];
 
 export default function WorkPage() {
     const [filter, setFilter] = useState('All');
 
     const filteredProjects = filter === 'All'
-        ? projects
-        : projects.filter(p => p.category === filter);
+        ? allProjects
+        : allProjects.filter(p => p.category === filter);
 
     return (
         <main className="work-page">
@@ -88,12 +64,26 @@ export default function WorkPage() {
                                 transition={{ duration: 0.4 }}
                             >
                                 <div className="work-card-image">
-                                    {/* Placeholder for project image */}
-                                    <div className="work-card-placeholder-bg"></div>
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title}
+                                        className="work-project-img"
+                                        onError={(e) => {
+                                            (e.target as HTMLImageElement).src = '/assets/projects/placeholder.jpg';
+                                        }}
+                                    />
                                 </div>
                                 <div className="work-card-info">
                                     <span className="work-card-category">{project.category}</span>
-                                    <h3 className="work-card-title">{project.title}</h3>
+                                    <h3 className="work-card-title">
+                                        {project.liveLink ? (
+                                            <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                                                {project.title}
+                                            </a>
+                                        ) : (
+                                            project.title
+                                        )}
+                                    </h3>
                                     <p className="work-card-desc">{project.desc}</p>
                                     <div className="work-card-tags">
                                         {project.tags.map((tag, tIndex) => (

@@ -6,21 +6,15 @@ export const specialtiesData = [
             "Intelligent agents, machine learning integration, and automated workflows that streamline operations.",
         frontImage: "/assets/projects/human-call-1.jpg",
         backImage: "/assets/projects/human-call-2.jpg",
-        color: "linear-gradient(to bottom, #00a0ebff, #e9d200ff)",
-        borderColor: "rgba(234, 50, 50, 0.3)",
+        color: "linear-gradient(135deg, #CBD3D9 0%, #A39FDD 100%)",
+        borderColor: "rgba(163, 159, 221, 0.3)",
+        textColor: "#FFFFFF",
         projects: [
             {
                 title: "Smart Support AI",
                 desc: "LLM-powered customer service agent that reduces response times by 80%.",
                 image: "/assets/projects/humancall.png",
                 tags: ["Python", "OpenAI", "React", "FastAPI"],
-                liveLink: "https://example.com"
-            },
-            {
-                title: "Predictive Sales Engine",
-                desc: "ML analytics dashboard for forecasting sales patterns with high accuracy.",
-                image: "/assets/projects/BVBBLZ-by-odsgns-01-19-2026_11_25_PM.png",
-                tags: ["TensorFlow", "Pandas", "Next.js"],
                 liveLink: "https://example.com"
             }
         ]
@@ -32,8 +26,9 @@ export const specialtiesData = [
             "Multi-tenant architectures, subscription billing integrations, and scalable cloud infrastructure for modern SaaS products.",
         frontImage: "/assets/projects/sms ver2.JPG",
         backImage: "/assets/projects/remote managment system.JPG",
-        color: "linear-gradient(to bottom, #10B981, #047857)",
-        borderColor: "rgba(16, 185, 129, 0.3)",
+        color: "linear-gradient(135deg, #0B1017 0%, #1E3A8A 100%)",
+        borderColor: "rgba(30, 58, 138, 0.3)",
+        textColor: "#FFFFFF",
         projects: [
             {
                 title: "SMS.bemydev Version 2",
@@ -93,8 +88,9 @@ export const specialtiesData = [
             "High-conversion platforms across e-commerce and business service sectors, including fashion retail and company formation systems, focusing on UX, scalability, and optimization.",
         frontImage: "/assets/projects/shapio v2.JPG",
         backImage: "/assets/projects/ecommerce2.jfif",
-        color: "linear-gradient(to bottom, #2563EB, #1E3A8A)",
-        borderColor: "rgba(37, 99, 235, 0.3)",
+        color: "linear-gradient(135deg, #FFF1F2 0%, #FBCFE8 100%)",
+        borderColor: "rgba(251, 207, 232, 0.3)",
+        textColor: "#9D174D",
         projects: [
             {
                 title: "Shapio",
@@ -154,8 +150,9 @@ export const specialtiesData = [
             "Creative digital agencies specializing in branding, marketing, SEO, and full-stack web development.",
         frontImage: "/assets/projects/Techtidemain.JPG",
         backImage: "/assets/projects/provetureback.JPG",
-        color: "linear-gradient(to bottom, #F97316, #C2410C)",
-        borderColor: "rgba(249, 115, 22, 0.3)",
+        color: "linear-gradient(135deg, #8B5CF6 0%, #000000 100%)",
+        borderColor: "rgba(139, 92, 246, 0.3)",
+        textColor: "#FFFFFF",
         projects: [
             {
                 title: "TideTech Digital Agency",
@@ -187,8 +184,9 @@ export const specialtiesData = [
             "HIPAA-compliant platforms, patient management systems, and secure telemedicine solutions.",
         frontImage: "/assets/projects/doctors.jfif",
         backImage: "/assets/projects/doctors 2.jfif",
-        color: "linear-gradient(to bottom, #0D9488, #115E59)",
-        borderColor: "rgba(13, 148, 136, 0.3)",
+        color: "linear-gradient(135deg, #3CAEA3 0%, #FFFFFF 100%)",
+        borderColor: "rgba(60, 174, 163, 0.3)",
+        textColor: "#1E293B",
         projects: [
             {
                 title: "Healthcare Digital Marketing Agency",
@@ -213,8 +211,9 @@ export const specialtiesData = [
             "Secure financial dashboards, real-time transaction processing, and data visualization for financial insights.",
         frontImage: "/assets/projects/coinband main.JPG",
         backImage: "/assets/projects/coinband hover.JPG",
-        color: "linear-gradient(to bottom, #7C3AED, #4C1D95)",
-        borderColor: "rgba(124, 58, 237, 0.3)",
+        color: "linear-gradient(135deg, #BCFF29 0%, #000000 100%)",
+        borderColor: "rgba(188, 255, 41, 0.3)",
+        textColor: "#FFFFFF",
         projects: [
             {
                 title: "Coinband",
@@ -232,8 +231,9 @@ export const specialtiesData = [
             "Digital publishing aggregators, interactive reader applications, and content management systems.",
         frontImage: "/assets/projects/ebook.jfif",
         backImage: "/assets/projects/ebook2.jfif",
-        color: "linear-gradient(to bottom, #0EA5E9, #075985)",
-        borderColor: "rgba(14, 165, 233, 0.3)",
+        color: "linear-gradient(135deg, #FAE9D1 0%, #78350F 100%)",
+        borderColor: "rgba(250, 233, 209, 0.3)",
+        textColor: "#FFFFFF",
         projects: [
             {
                 title: "Novis Publishing",
