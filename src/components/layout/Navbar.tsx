@@ -20,7 +20,7 @@ export default function Navbar() {
         { name: 'Work', path: '/work', icon: <FiCode /> },
         { name: 'CV', path: '/cv', icon: <FiFileText /> },
         { name: 'Profile', path: '/profile', icon: <FiUser /> },
-        { name: 'Contact Me', path: '#contact', icon: <FiMail /> }
+        { name: 'Contact Me', path: 'https://wa.me/923101022778', icon: <FiMail /> }
     ];
 
     // For smooth width transition on scroll (Desktop only)

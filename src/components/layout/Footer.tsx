@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
 
 export default function Footer() {
@@ -13,21 +13,21 @@ export default function Footer() {
                 </div>
 
                 <div className="contact-links">
-                    <a href="mailto:hassan@example.com" className="contact-link">
+                    <a href="mailto:hassanshaikh9717@gmail.com" className="contact-link">
                         <FaEnvelope />
                         <span>Email</span>
                     </a>
-                    <a href="https://linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="contact-link">
                         <FaLinkedin />
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://github.com/hassan-shaikh" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    <a href="https://github.com/IHassanshaikh" target="_blank" rel="noopener noreferrer" className="contact-link">
                         <FaGithub />
                         <span>GitHub</span>
                     </a>
-                    <a href="https://twitter.com/hassan" target="_blank" rel="noopener noreferrer" className="contact-link">
-                        <FaTwitter />
-                        <span>Twitter</span>
+                    <a href="https://www.instagram.com/hassan.techlife/" target="_blank" rel="noopener noreferrer" className="contact-link">
+                        <FaInstagram />
+                        <span>Instagram</span>
                     </a>
                 </div>
 

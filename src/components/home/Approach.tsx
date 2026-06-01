@@ -124,7 +124,7 @@ export default function Approach() {
             </div>
 
             <div className="approach-cta-wrapper">
-                <a href="#contact" className="btn-approach-cta">
+                <a href="https://wa.me/923101022778" target="_blank" rel="noopener noreferrer" className="btn-approach-cta">
                     Let&apos;s Build Together
                 </a>
             </div>

@@ -21,9 +21,9 @@ export default function CVPage() {
     };
 
     const skills = {
-        technical: ["React / Next.js", "TypeScript / JS", "Node.js / Python", "PostgreSQL / Prisma", "AWS / Docker", "REST / GraphQL"],
-        ai_automation: ["OpenAI / LangChain", "Automation Workflows", "Prompt Engineering", "RAG Systems"],
-        design: ["Figma", "Framer Motion", "GSAP Animations", "UI/UX Architecture"]
+        technical: ["React / Next.js", "Node.js / Express", "Python", "REST APIs", "MongoDB / PostgreSQL", "Cloud Computing & VPS", "Web Hosting", "Web Crawling"],
+        ai_automation: ["OpenAI API", "Agentic AI Development", "Agentic Workflows & Automation", "Generative AI", "Prompt Writing", "LangChain", "Machine Learning / NLP"],
+        design: ["Figma", "UI/UX Design", "Responsive Web Design", "Tailwind CSS"]
     };
 
     return (
@@ -47,8 +47,8 @@ export default function CVPage() {
                         </motion.h2>
 
                         <div className="cv-contact-grid">
-                            <a href="mailto:hassan@example.com" className="cv-contact-item">
-                                <FiMail /> hassan@example.com
+                            <a href="mailto:hassanshaikh9717@gmail.com" className="cv-contact-item">
+                                <FiMail /> hassanshaikh9717@gmail.com
                             </a>
                             <a href="tel:+92123456789" className="cv-contact-item">
                                 <FiPhone /> +92 (300) 1234567
@@ -114,8 +114,8 @@ export default function CVPage() {
                         <section className="sidebar-section">
                             <h3 className="sidebar-section-title"> Socials</h3>
                             <div className="cv-contact-grid" style={{ gridTemplateColumns: '1fr' }}>
-                                <a href="#" className="cv-contact-item"><FiLinkedin /> linkedin.com/in/hassan</a>
-                                <a href="#" className="cv-contact-item"><FiGithub /> github.com/hassan</a>
+                                <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" className="cv-contact-item" target="_blank" rel="noopener noreferrer"><FiLinkedin /> www.linkedin.com/in/hassan-shaikh-618966253</a>
+                                <a href="https://github.com/IHassanshaikh" className="cv-contact-item" target="_blank" rel="noopener noreferrer"><FiGithub /> github.com/IHassanshaikh</a>
                             </div>
                         </section>
                     </aside>
@@ -164,6 +164,18 @@ export default function CVPage() {
 
                                 <div className="timeline-item">
                                     <div className="timeline-header">
+                                        <h4 className="timeline-role">Web Developer</h4>
+                                        <span className="timeline-date">2023 - 2025</span>
+                                    </div>
+                                    <span className="timeline-company">Web Whiz</span>
+                                    <ul className="timeline-content">
+                                        <li>Developed and maintained web applications and implemented automation solutions.</li>
+                                        <li>Optimized workflows to enhance efficiency and user experience.</li>
+                                    </ul>
+                                </div>
+
+                                <div className="timeline-item">
+                                    <div className="timeline-header">
                                         <h4 className="timeline-role">Frontend Developer Intern</h4>
                                         <span className="timeline-date">2022 - 2023</span>
                                     </div>
@@ -171,6 +183,17 @@ export default function CVPage() {
                                     <ul className="timeline-content">
                                         <li>Collaborated with cross-functional teams to build modular UI component libraries.</li>
                                         <li>Assisted in the migration of legacy projects to modern React-based frameworks.</li>
+                                    </ul>
+                                </div>
+
+                                <div className="timeline-item">
+                                    <div className="timeline-header">
+                                        <h4 className="timeline-role">Ex employee</h4>
+                                        <span className="timeline-date">2021 - 2022</span>
+                                    </div>
+                                    <span className="timeline-company">Akbar Ali & Sons</span>
+                                    <ul className="timeline-content">
+                                        <li>Started professional journey.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -195,6 +218,15 @@ export default function CVPage() {
                                             <span className="timeline-date">2024</span>
                                         </div>
                                         <span className="univ">SMIT (Saylani Mass IT Training)</span>
+                                    </div>
+                                </div>
+                                <div className="edu-item">
+                                    <div className="edu-item-content">
+                                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                            <h3>Web Development Course</h3>
+                                            <span className="timeline-date">2024</span>
+                                        </div>
+                                        <span className="univ">AS Community HUB</span>
                                     </div>
                                 </div>
                             </div>

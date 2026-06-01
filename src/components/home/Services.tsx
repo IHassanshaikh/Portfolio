@@ -58,7 +58,7 @@ export default function Services() {
                 </div>
 
                 <div className="services-action">
-                    <a href="#contact" className="btn-service-cta">
+                    <a href="https://wa.me/923101022778" target="_blank" rel="noopener noreferrer" className="btn-service-cta">
                         Start a Project
                     </a>
                 </div>

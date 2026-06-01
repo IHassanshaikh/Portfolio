@@ -62,7 +62,7 @@ export default function FAQ() {
                 </div>
                 <div className="faq-action">
                     <p className="faq-action-text">Still have questions?</p>
-                    <a href="#contact" className="btn-faq-cta">
+                    <a href="https://wa.me/923101022778" target="_blank" rel="noopener noreferrer" className="btn-faq-cta">
                         Contact Support
                     </a>
                 </div>

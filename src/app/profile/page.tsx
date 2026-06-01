@@ -14,6 +14,7 @@ import './ProfilePage.css';
 
 export default function ProfilePage() {
     const [isAboutExpanded, setIsAboutExpanded] = useState(false);
+    const [isPostExpanded, setIsPostExpanded] = useState(false);
     return (
         <main className="profile-page-root">
             <div className="profile-container">
@@ -47,7 +48,7 @@ export default function ProfilePage() {
                                         <span className="contact-info-link">Contact info</span>
                                     </div>
                                     <div className="github-link-row">
-                                        <a href="https://github.com/hassan-shaikh" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/IHassanshaikh" target="_blank" rel="noopener noreferrer">
                                             GitHub <FiExternalLink size={14} />
                                         </a>
                                     </div>
@@ -149,7 +150,7 @@ export default function ProfilePage() {
                             <div className="top-skills-box">
                                 <h4><FiAward /> Top skills</h4>
                                 <p className="top-skills-list">
-                                    Responsive Web Design • Web Development • Full-Stack Development • Back-End Web Development • Front-End Development
+                                    Agentic AI Development • Generative AI • Cloud Computing (VPS) • Machine Learning • Python • OpenAI API • React.js • Next.js
                                 </p>
                                 <FiArrowRight className="arrow-right" />
                             </div>
@@ -168,27 +169,37 @@ export default function ProfilePage() {
                         </div>
 
                         <div className="posts-list">
-                            <div className="post-item">
-                                <div className="post-content">
-                                    <div style={{ textAlign: 'right', direction: 'rtl', marginBottom: '8px' }}>
-                                        إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ
-                                    </div>
-                                    <p style={{ fontSize: '14px', color: 'rgb(var(--muted))' }}>.To God we belong and to Him we return</p>
-                                </div>
-                            </div>
-                            <div className="post-item">
-                                <div className="post-author-row">
-                                    <div className="post-avatar" style={{ background: 'rgba(var(--foreground), 0.1)' }}></div>
+                            <div className="post-item" style={{ maxWidth: '600px', margin: '0 auto' }}>
+                                <div className="post-author-row" style={{ display: 'flex', gap: '12px', marginBottom: '12px', alignItems: 'center' }}>
+                                    <div className="post-avatar" style={{ background: 'url("/assets/profile/pfp.webp")', backgroundSize: 'cover', borderRadius: '50%', width: '40px', height: '40px' }}></div>
                                     <div>
-                                        <p style={{ fontWeight: 600, fontSize: '14px' }}>Ramadan Mubarak 🌙</p>
-                                        <p style={{ fontSize: '14px', color: 'rgb(var(--muted))' }}>
-                                            As we welcome the holy month of Ramadan, wishing peace and prosperity to everyone observin <span className="show-more">...show more</span>
-                                        </p>
+                                        <p style={{ fontWeight: 600, fontSize: '13px', margin: 0 }}>Hassan Shaikh <span style={{ color: 'rgb(var(--muted))', fontWeight: 400 }}>• You</span></p>
+                                        <p style={{ fontSize: '11px', color: 'rgb(var(--muted))', margin: '2px 0' }}>Full-Stack and AI Automation Developer at @TechtideLLC</p>
+                                        <p style={{ fontSize: '11px', color: 'rgb(var(--muted))', margin: 0 }}>6mo • 🌎</p>
                                     </div>
+                                </div>
+                                <div className="post-content" style={{ fontSize: '13px', lineHeight: 1.5 }}>
+                                    <p style={{ fontWeight: 600, marginBottom: '8px' }}>REPRESENTING INNOVATION AT THE AI WRAPPER COMPETITION 2025!</p>
+                                    {!isPostExpanded ? (
+                                        <p style={{ marginBottom: '8px' }}>
+                                            Thrilled to have presented our project "<strong>SAFE HER</strong>" an <strong>AI-BASED HARASSMENT REPORTING & EMOTIONAL SUPPORT BOT</strong> at the <strong>REGIONAL ROUND OF THE AI WRAPPER...</strong> <span className="show-more" onClick={() => setIsPostExpanded(true)} style={{ color: 'rgb(var(--muted))', cursor: 'pointer', fontWeight: 600 }}>see more</span>
+                                        </p>
+                                    ) : (
+                                        <>
+                                            <p style={{ marginBottom: '8px' }}>Thrilled to have presented our project "<strong>SAFE HER</strong>" an <strong>AI-BASED HARASSMENT REPORTING & EMOTIONAL SUPPORT BOT</strong> at the <strong>REGIONAL ROUND OF THE AI WRAPPER COMPETITION 2025</strong>, held at <span style={{ color: '#0a66c2', fontWeight: 600 }}>National Incubation Center Karachi</span>, organized by <span style={{ color: '#0a66c2', fontWeight: 600 }}>Ignite - National Technology Fund</span> and <span style={{ color: '#0a66c2', fontWeight: 600 }}>Tech Nation</span></p>
+                                            <p style={{ marginBottom: '8px' }}>Our project aims to leverage <strong>ARTIFICIAL INTELLIGENCE (AI), NATURAL LANGUAGE PROCESSING (NLP)</strong>, and <strong>AUTOMATION</strong> to create a <strong>SAFER, SMARTER & MORE EMPATHETIC DIGITAL ENVIRONMENT FOR WOMEN</strong> truly <strong>COMBINING TECHNOLOGY WITH PURPOSE.</strong></p>
+                                            <p style={{ marginBottom: '8px' }}>Grateful to my amazing teammate <span style={{ color: '#0a66c2', fontWeight: 600 }}>Rahima Khurram</span> for her collaboration and to <span style={{ color: '#0a66c2', fontWeight: 600 }}>Ignite - National Technology Fund</span> for hosting such an <strong>INSPIRING EVENT DRIVING AI INNOVATION IN PAKISTAN.</strong></p>
+                                            <p style={{ color: '#0a66c2', fontWeight: 600, marginBottom: '8px' }}>#AIWrapperCompetition #Ignite #TechNationPakistan #NICKarachi #AI #Innovation #WomenSafety #SafeHer #Teamwork #ArtificialIntelligence</p>
+                                            <span className="show-more" onClick={() => setIsPostExpanded(false)} style={{ color: 'rgb(var(--muted))', cursor: 'pointer', fontWeight: 600, display: 'block', marginTop: '8px' }}>see less</span>
+                                        </>
+                                    )}
+                                </div>
+                                <div className="post-image" style={{ width: '100%', borderRadius: '8px', overflow: 'hidden', marginTop: '12px', border: '1px solid rgba(var(--foreground), 0.1)', display: 'flex', justifyContent: 'center', background: 'rgba(var(--foreground), 0.02)' }}>
+                                    <img src="/assets/images/img6.webp" alt="AI Wrapper Competition" style={{ maxHeight: '650px', width: 'auto', maxWidth: '100%', objectFit: 'contain', display: 'block' }} />
                                 </div>
                             </div>
                         </div>
-                        <a href="#" className="show-all-btn">Show all posts →</a>
+                        <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="show-all-btn">Show all posts →</a>
                     </div>
 
                     {/* Experience Section */}
@@ -201,9 +212,9 @@ export default function ProfilePage() {
                                 {
                                     role: 'Full Stack and AI Automation Developer',
                                     company: 'Tech Tide LLC • Full-time',
-                                    date: '2025 - Present • 1 yr 3 mos',
+                                    date: '2025 - Present • 1 yr 5 mos',
                                     location: 'Karachi, Sindh, Pakistan • Hybrid',
-                                    desc: 'Currently working at Tide Tech as a Developer & Automation Specialist, where my major role is to develop and optimize web applications, automate workflows, and integrate AI-driven solutions to improve efficience.',
+                                    desc: 'Currently working at Tide Tech as a Developer & Automation Specialist, where my major role is to develop and optimize web applications, automate workflows, and integrate AI-driven solutions to improve efficiency and scalability',
                                     skills: 'React js, Automation and +12 skills'
                                 },
                                 {
@@ -220,6 +231,21 @@ export default function ProfilePage() {
                                     location: 'Pakistan • On-site',
                                     desc: 'My major role was to develop and maintain web applications, implement automation solutions, and optimize workflows to enhance efficiency and user experience.',
                                     skills: 'React.js, JavaScript and +4 skills'
+                                },
+                                {
+                                    role: 'Frontend Developer Intern',
+                                    company: 'CodeAlpha • Internship',
+                                    date: 'Dec 2022 - Sep 2023 • 10 mos',
+                                    location: 'India • Remote',
+                                    desc: 'Collaborated with a team to develop responsive web applications using React.js and Next.js.',
+                                    skills: 'Front-End Development, React js and +3 skills'
+                                },
+                                {
+                                    role: 'Ex employee of Akbar ali & sons',
+                                    company: 'Akber Ali & Sons • Full-time',
+                                    date: 'Aug 2021 - Sep 2022 • 1 yr 2 mos',
+                                    location: 'Karachi, Sindh, Pakistan',
+                                    skills: ''
                                 }
                             ].map((job, i) => (
                                 <div key={i} className="linkedin-list-item">
@@ -233,16 +259,18 @@ export default function ProfilePage() {
                                         <span className="item-subtitle">{job.company}</span>
                                         <div className="item-meta-row">
                                             <span className="item-meta"><FiCalendar size={12} /> {job.date}</span>
-                                            <span className="item-meta"><FiMapPin size={12} /> {job.location}</span>
+                                            {job.location && <span className="item-meta"><FiMapPin size={12} /> {job.location}</span>}
                                         </div>
                                         {job.desc && (
                                             <p className="item-description">
-                                                {job.desc} <span className="show-more">...see more</span>
+                                                {job.desc}
                                             </p>
                                         )}
-                                        <div className="experience-skill-tag">
-                                            <FiAward /> <span>{job.skills}</span>
-                                        </div>
+                                        {job.skills && (
+                                            <div className="experience-skill-tag">
+                                                <FiAward /> <span>{job.skills}</span>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             ))}
@@ -255,27 +283,56 @@ export default function ProfilePage() {
                             <h3 className="widget-title">Education</h3>
                         </div>
                         <div className="linkedin-list">
-                            <div className="linkedin-list-item">
-                                <div className="item-logo">
-                                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(var(--foreground), 0.05)', color: 'rgb(var(--primary))' }}>
-                                        <FiAward size={24} />
+                            {[
+                                {
+                                    school: 'Iqra University (Official)',
+                                    degree: "Bachelor's in Computer Science, Development",
+                                    date: 'Jul 2022 - Aug 2026',
+                                    grade: 'Grade: 3.3',
+                                    desc: 'Activities and societies: Completed intensive training in full-stack development, focusing on modern frameworks and best practices.',
+                                    skills: 'C++, Python (Programming Language) and +1 skill'
+                                },
+                                {
+                                    school: 'AS Community HUB',
+                                    degree: 'Course, Web Development',
+                                    date: 'May 2024 - Aug 2024',
+                                    grade: '',
+                                    desc: '',
+                                    skills: ''
+                                },
+                                {
+                                    school: 'SMIT',
+                                    degree: 'Diploma, AI and Chatbots',
+                                    date: 'Jan 2024 - Jul 2024',
+                                    grade: '',
+                                    desc: '',
+                                    skills: ''
+                                }
+                            ].map((edu, i) => (
+                                <div key={i} className="linkedin-list-item">
+                                    <div className="item-logo">
+                                        <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(var(--foreground), 0.05)', color: 'rgb(var(--primary))' }}>
+                                            <FiAward size={24} />
+                                        </div>
+                                    </div>
+                                    <div className="item-content">
+                                        <h3>{edu.school}</h3>
+                                        <span className="item-subtitle">{edu.degree}</span>
+                                        <div className="item-meta-row">
+                                            <span className="item-meta"><FiCalendar size={12} /> {edu.date}</span>
+                                            {edu.grade && <span className="item-meta">{edu.grade}</span>}
+                                        </div>
+                                        {edu.desc && <p className="item-description">{edu.desc}</p>}
+                                        {edu.skills && (
+                                            <div className="experience-skill-tag">
+                                                <FiAward /> <span>{edu.skills}</span>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
-                                <div className="item-content">
-                                    <h3>Iqra University (Official)</h3>
-                                    <span className="item-subtitle">Bachelor's in Computer Science, Development</span>
-                                    <div className="item-meta-row">
-                                        <span className="item-meta"><FiCalendar size={12} /> Jul 2022 - Aug 2026</span>
-                                        <span className="item-meta">Grade: 3.3</span>
-                                    </div>
-                                    <p className="item-description">Activities and societies: Completed intensive training in full-stack development, focusing on modern frameworks and best practices.</p>
-                                    <div className="experience-skill-tag">
-                                        <FiAward /> <span>C++, Python (Programming Language) and +1 skill</span>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
-                        <a href="#" className="show-all-btn">Show all 4 educations →</a>
+                        <a href="#" className="show-all-btn">Show all educations →</a>
                     </div>
 
                     {/* Licenses & Certifications Section */}
@@ -290,14 +347,49 @@ export default function ProfilePage() {
                                     issuer: 'SMEC\'26',
                                     date: 'Issued Jan 2026',
                                     skills: 'C++, DSA and +1 skill',
-                                    img: 'Certificate Image Placeholder'
+                                    img: '/assets/cerrtificates/smec.jfif'
                                 },
                                 {
                                     name: 'Wordpress',
                                     issuer: 'NS Training (SMC-PRIVATE) Limited',
                                     date: 'Issued Sep 2024',
                                     skills: 'WordPress and Elementor',
-                                    img: 'wordpress.PNG'
+                                    img: '/assets/cerrtificates/NS training wp.jfif'
+                                },
+                                {
+                                    name: 'Frontend Developer Intern',
+                                    issuer: 'CodeAlpha',
+                                    date: 'Issued Sep 2023',
+                                    skills: 'Front-End Development',
+                                    img: '/assets/cerrtificates/Codealpha fronened.jfif'
+                                },
+                                {
+                                    name: 'Data Structure and Algorithm (DSA)',
+                                    issuer: 'CodeAlpha',
+                                    date: 'Issued 2023',
+                                    skills: 'DSA, Problem Solving',
+                                    img: '/assets/cerrtificates/codealpha DSA.jfif'
+                                },
+                                {
+                                    name: 'UI/UX Designing',
+                                    issuer: 'SMIT',
+                                    date: 'Issued 2023',
+                                    skills: 'UI/UX, Figma',
+                                    img: '/assets/cerrtificates/SMIT UIUX.jfif'
+                                },
+                                {
+                                    name: 'Web Development Course',
+                                    issuer: 'AS Community HUB',
+                                    date: 'Issued Aug 2024',
+                                    skills: 'Web Development',
+                                    img: '/assets/cerrtificates/AS commuinty webdev.jfif'
+                                },
+                                {
+                                    name: 'Tailwind CSS Workshop',
+                                    issuer: 'Workshop',
+                                    date: 'Issued 2024',
+                                    skills: 'Tailwind CSS',
+                                    img: '/assets/cerrtificates/tailwind workshop.jfif'
                                 }
                             ].map((cert, i) => (
                                 <div key={i} className="linkedin-list-item">
@@ -310,7 +402,13 @@ export default function ProfilePage() {
                                             <FiAward /> <span>{cert.skills}</span>
                                         </div>
                                         <div style={{ marginTop: '12px', padding: '8px', border: '1px solid rgba(var(--foreground), 0.1)', borderRadius: '4px', display: 'flex', alignItems: 'center', gap: '8px', width: 'fit-content' }}>
-                                            <div style={{ width: '60px', height: '40px', background: 'rgba(var(--foreground), 0.05)', borderRadius: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: 'rgb(var(--muted))' }}>IMG</div>
+                                            <div style={{ width: '60px', height: '40px', background: 'rgba(var(--foreground), 0.05)', borderRadius: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: 'rgb(var(--muted))', overflow: 'hidden' }}>
+                                                {cert.img ? (
+                                                    <img src={cert.img} alt={cert.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                ) : (
+                                                    'IMG'
+                                                )}
+                                            </div>
                                             <span style={{ fontSize: '14px', fontWeight: 600 }}>{cert.name}</span>
                                         </div>
                                     </div>
@@ -351,11 +449,11 @@ export default function ProfilePage() {
                         <h3 className="widget-title" style={{ fontSize: '14px', marginBottom: '16px' }}>Social Profiles</h3>
 
                         <div className="social-links-list">
-                            <a href="https://github.com/hassan-shaikh" target="_blank" rel="noopener noreferrer" className="social-link-item">
+                            <a href="https://github.com/IHassanshaikh" target="_blank" rel="noopener noreferrer" className="social-link-item">
                                 <FiGithub size={20} />
                                 <span>@hassan-shaikh</span>
                             </a>
-                            <a href="https://linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="social-link-item">
+                            <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="social-link-item">
                                 <FiLinkedin size={20} />
                                 <span>Hassan Shaikh</span>
                             </a>

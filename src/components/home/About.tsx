@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import './About.css';
-import { FiMove, FiGithub, FiLinkedin, FiInstagram, FiTwitter } from 'react-icons/fi';
+import { FiMove, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 import { BsArrowRight } from 'react-icons/bs';
 import Image from 'next/image';
 
@@ -30,8 +30,8 @@ export default function About() {
 
                     <div className="about-socials">
                         <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" className="social-icon" target="_blank" rel="noopener noreferrer"><FiLinkedin /></a>
-                        <a href="https://github.com/mhassan9717" className="social-icon" target="_blank" rel="noopener noreferrer"><FiGithub /></a>
-                        <a href="https://www.instagram.com/mhassan9717" className="social-icon" target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
+                        <a href="https://github.com/IHassanshaikh" className="social-icon" target="_blank" rel="noopener noreferrer"><FiGithub /></a>
+                        <a href="https://www.instagram.com/hassan.techlife/" className="social-icon" target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
                     </div>
 
                     <a href="#" className="dive-deeper">
@@ -45,7 +45,7 @@ export default function About() {
                             {/* Image 1 - Profile */}
                             <div className="carousel-item item-1">
                                 <Image
-                                    src="/assets/profile/pfp.webp"
+                                    src="/assets/images/img4.webp"
                                     alt="Profile Photo"
                                     width={300}
                                     height={400}
@@ -56,7 +56,7 @@ export default function About() {
                             {/* Image 2 - Home 2 */}
                             <div className="carousel-item item-2">
                                 <Image
-                                    src="/assets/images/home2.jfif"
+                                    src="/assets/images/img2.webp"
                                     alt="Home 2"
                                     width={300}
                                     height={400}
@@ -67,7 +67,7 @@ export default function About() {
                             {/* Image 3 - Home 3 */}
                             <div className="carousel-item item-3">
                                 <Image
-                                    src="/assets/images/home 3.jfif"
+                                    src="/assets/images/img6.webp"
                                     alt="Home 3"
                                     width={300}
                                     height={400}

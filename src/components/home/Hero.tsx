@@ -41,8 +41,8 @@ export default function Hero() {
                     <div className="hero-footer-row animate-fade-up">
                         <div className="social-links">
                             <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="social-link">Linkedin <FiArrowUpRight className="social-arrow" /></a>
-                            <a href="https://github.com/mhassan9717" target="_blank" rel="noopener noreferrer" className="social-link">Github <FiArrowUpRight className="social-arrow" /></a>
-                            <a href="https://www.instagram.com/mhassan9717" target="_blank" rel="noopener noreferrer" className="social-link">Instagram <FiArrowUpRight className="social-arrow" /></a>
+                            <a href="https://github.com/IHassanshaikh" target="_blank" rel="noopener noreferrer" className="social-link">Github <FiArrowUpRight className="social-arrow" /></a>
+                            <a href="https://www.instagram.com/hassan.techlife/" target="_blank" rel="noopener noreferrer" className="social-link">Instagram <FiArrowUpRight className="social-arrow" /></a>
                             <a href="mailto:hassanshaikh9717@gmail.com" className="social-link">Gmail <FiArrowUpRight className="social-arrow" /></a>
                         </div>
 

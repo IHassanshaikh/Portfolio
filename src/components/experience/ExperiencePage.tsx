@@ -5,52 +5,66 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiCode, FiLayers, FiDatabase, FiCpu, FiGlobe, FiCoffee, FiCamera, FiMusic, FiAward, FiExternalLink, FiCheckSquare } from 'react-icons/fi';
 
 const skills = [
-    { name: 'Frontend', icon: <FiLayers />, level: '95%' },
-    { name: 'Backend', icon: <FiDatabase />, level: '85%' },
-    { name: 'DevOps', icon: <FiCpu />, level: '75%' },
-    { name: 'Web3', icon: <FiGlobe />, level: '70%' },
-    { name: 'Algorithms', icon: <FiCode />, level: '90%' }
+    { name: 'Full Stack Web', icon: <FiLayers />, level: '95%' },
+    { name: 'AI / Machine Learning', icon: <FiCpu />, level: '85%' },
+    { name: 'Python & Data', icon: <FiDatabase />, level: '80%' },
+    { name: 'REST APIs & Backend', icon: <FiGlobe />, level: '90%' },
+    { name: 'Algorithms (DSA)', icon: <FiCode />, level: '90%' }
 ];
 
 const experiences = [
     {
         id: 1,
-        date: '2023 - Present',
-        title: 'Senior Full Stack Developer',
-        company: 'InnovateTech Solutions',
+        date: '2025 - Present',
+        title: 'Full Stack and AI Automation Developer',
+        company: 'Tech Tide LLC',
         logo: '/assets/logos/innovate.png', // Placeholder
-        desc: 'Leading the development of enterprise-scale web applications and mentoring junior developers.',
+        desc: 'Currently working at Tide Tech as a Developer & Automation Specialist, where my major role is to develop and optimize web applications, automate workflows, and integrate AI-driven solutions to improve efficiency and scalability.',
         details: [
-            'Architected a microservices-based dashboard that improved data processing speed by 40%.',
-            'Implemented a robust CI/CD pipeline reducing deployment errors by 25%.',
-            'Collaborated with designers to create a unified design system using React and Tailwind.'
+            'React js, Automation and +12 skills'
         ]
     },
     {
         id: 2,
-        date: '2021 - 2023',
-        title: 'Frontend Engineer',
-        company: 'Creative Digital Agency',
+        date: '2024 - 2025',
+        title: 'Web Developer Freelancer',
+        company: 'Fiverr',
         logo: '/assets/logos/creative.png',
-        desc: 'Built high-end marketing websites and interactive user interfaces for global brands.',
+        desc: 'Worked as a freelance Web Developer focusing on frontend and web development projects.',
         details: [
-            'Developed 15+ pixel-perfect landing pages with complex GSAP animations.',
-            'Optimized website performance achieving an average Lighthouse score of 95+.',
-            'Integrated headless CMS (Strapi/Contentful) for dynamic content management.'
+            'Front-End Development and Web Development'
         ]
     },
     {
         id: 3,
-        date: '2019 - 2021',
-        title: 'Junior Web Developer',
-        company: 'StartUp Hub',
+        date: '2023 - 2025',
+        title: 'Web Developer',
+        company: 'Web Whiz',
         logo: '/assets/logos/startup.png',
-        desc: 'Started my professional journey building web prototypes and small-scale applications.',
+        desc: 'My major role was to develop and maintain web applications, implement automation solutions, and optimize workflows to enhance efficiency and user experience.',
         details: [
-            'Assisted in migrating a legacy jQuery codebase to modern React.',
-            'Developed reusable UI components increasing team productivity by 15%.',
-            'Learned and implemented basic SEO and accessibility best practices.'
+            'React.js, JavaScript and +4 skills'
         ]
+    },
+    {
+        id: 4,
+        date: '2022 - 2023',
+        title: 'Frontend Developer Intern',
+        company: 'CodeAlpha',
+        logo: '/assets/logos/startup.png',
+        desc: 'Collaborated with a team to develop responsive web applications using React.js and Next.js.',
+        details: [
+            'Front-End Development, React js and +3 skills'
+        ]
+    },
+    {
+        id: 5,
+        date: '2021 - 2022',
+        title: 'Ex employee of Akbar ali & sons',
+        company: 'Akber Ali & Sons',
+        logo: '/assets/logos/startup.png',
+        desc: 'Started my professional journey here.',
+        details: []
     }
 ];
 
@@ -61,7 +75,8 @@ const certificates = [
         issuer: "SMEC'26 - Tech Competition",
         date: 'Jan 2026',
         skills: ['C++', 'Algorithms', 'DSA'],
-        icon: <FiAward />
+        icon: <FiAward />,
+        link: '/assets/cerrtificates/smec.jfif'
     },
     {
         id: 2,
@@ -69,23 +84,53 @@ const certificates = [
         issuer: 'NS Training (SMC-PRIVATE) Limited',
         date: 'Sep 2024',
         skills: ['WordPress', 'Elementor', 'SEO'],
-        icon: <FiCheckSquare />
+        icon: <FiCheckSquare />,
+        link: '/assets/cerrtificates/NS training wp.jfif'
     },
     {
         id: 3,
-        name: 'Full Stack Web Development',
-        issuer: 'Tech Academy Global',
-        date: 'Mar 2024',
-        skills: ['React', 'Node.js', 'MongoDB'],
-        icon: <FiCode />
+        name: 'Frontend Developer Intern',
+        issuer: 'CodeAlpha',
+        date: 'Sep 2023',
+        skills: ['Front-End Development'],
+        icon: <FiCode />,
+        link: '/assets/cerrtificates/Codealpha fronened.jfif'
     },
     {
         id: 4,
-        name: 'AI Automation Specialist',
-        issuer: 'Silicon Valley Forge',
-        date: 'Dec 2023',
-        skills: ['Python', 'NoCode', 'AutoGPT'],
-        icon: <FiCpu />
+        name: 'Data Structure and Algorithm (DSA)',
+        issuer: 'CodeAlpha',
+        date: '2023',
+        skills: ['DSA', 'Problem Solving'],
+        icon: <FiCpu />,
+        link: '/assets/cerrtificates/codealpha DSA.jfif'
+    },
+    {
+        id: 5,
+        name: 'UI/UX Designing',
+        issuer: 'SMIT',
+        date: '2023',
+        skills: ['UI/UX', 'Figma'],
+        icon: <FiAward />,
+        link: '/assets/cerrtificates/SMIT UIUX.jfif'
+    },
+    {
+        id: 6,
+        name: 'Web Development Course',
+        issuer: 'AS Community HUB',
+        date: 'Aug 2024',
+        skills: ['Web Development'],
+        icon: <FiGlobe />,
+        link: '/assets/cerrtificates/AS commuinty webdev.jfif'
+    },
+    {
+        id: 7,
+        name: 'Tailwind CSS Workshop',
+        issuer: 'Workshop',
+        date: '2024',
+        skills: ['Tailwind CSS'],
+        icon: <FiCode />,
+        link: '/assets/cerrtificates/tailwind workshop.jfif'
     }
 ];
 
@@ -133,7 +178,7 @@ export default function ExperiencePage() {
                         transition={{ duration: 1 }}
                     >
                         <div className="about-image-frame">
-                            <div style={{ width: '100%', height: '100%', background: 'rgba(var(--primary), 0.05)' }}></div>
+                            <img src="/assets/images/img3.webp" alt="Experience Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                     </motion.div>
                 </section>
@@ -229,9 +274,15 @@ export default function ExperiencePage() {
                                         </ul>
 
                                         <div className="achievement-images">
-                                            <div className="achievement-img"></div>
-                                            <div className="achievement-img"></div>
-                                            <div className="achievement-img"></div>
+                                            <div className="achievement-img" style={{ overflow: 'hidden' }}>
+                                                <img src="/assets/images/img4.webp" alt="Achievement 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            </div>
+                                            <div className="achievement-img" style={{ overflow: 'hidden' }}>
+                                                <img src="/assets/images/img5.webp" alt="Achievement 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            </div>
+                                            <div className="achievement-img" style={{ overflow: 'hidden' }}>
+                                                <img src="/assets/images/img6.webp" alt="Achievement 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            </div>
                                         </div>
                                     </motion.div>
                                 )}
@@ -276,7 +327,7 @@ export default function ExperiencePage() {
                                             <span key={si} className="cert-skill-tag">{skill}</span>
                                         ))}
                                     </div>
-                                    <a href="#" className="cert-link">
+                                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="cert-link">
                                         View Credential <FiExternalLink />
                                     </a>
                                 </div>

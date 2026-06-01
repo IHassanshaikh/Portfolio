@@ -39,7 +39,7 @@ export default function IdeaExecution() {
                     </div>
                 </div>
 
-                <a href="mailto:contact@example.com" className="idea-btn">
+                <a href="mailto:hassanshaikh9717@gmail.com" className="idea-btn">
                     Get in touch <BsArrowRight />
                 </a>
 

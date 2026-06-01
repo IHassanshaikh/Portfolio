@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
 
 export default function Contact() {
@@ -17,15 +17,19 @@ export default function Contact() {
                         <FaEnvelope />
                         <span>Email</span>
                     </a>
+                    <a href="https://wa.me/923101022778" target="_blank" rel="noopener noreferrer" className="contact-link">
+                        <FaWhatsapp />
+                        <span>WhatsApp</span>
+                    </a>
                     <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="contact-link">
                         <FaLinkedin />
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://github.com/mhassan9717" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    <a href="https://github.com/IHassanshaikh" target="_blank" rel="noopener noreferrer" className="contact-link">
                         <FaGithub />
                         <span>GitHub</span>
                     </a>
-                    <a href="https://www.instagram.com/mhassan9717" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    <a href="https://www.instagram.com/hassan.techlife/" target="_blank" rel="noopener noreferrer" className="contact-link">
                         <FaInstagram />
                         <span>Instagram</span>
                     </a>

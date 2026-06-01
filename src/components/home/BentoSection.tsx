@@ -61,13 +61,13 @@ export default function BentoSection() {
                     <div className="card-ambient-glow"></div>
                     <div className="partnership-images">
                         <motion.div whileHover={{ scale: 1.1, zIndex: 10 }} className="partnership-img-ring ring-1">
-                            <Image src="/assets/images/home2.jfif" alt="Project 1" width={90} height={90} className="object-cover" />
+                            <Image src="/assets/images/img2.webp" alt="Project 1" width={90} height={90} className="object-cover" />
                         </motion.div>
                         <motion.div whileHover={{ scale: 1.1, zIndex: 10 }} className="partnership-img-ring ring-2 ring-center">
-                            <Image src="/assets/profile/pfp.webp" alt="Profile" width={110} height={110} className="object-cover" />
+                            <Image src="/assets/images/img4.webp" alt="Profile" width={110} height={110} className="object-cover" />
                         </motion.div>
                         <motion.div whileHover={{ scale: 1.1, zIndex: 10 }} className="partnership-img-ring ring-3">
-                            <Image src="/assets/images/home 3.jfif" alt="Project 2" width={90} height={90} className="object-cover" />
+                            <Image src="/assets/images/img6.webp" alt="Project 2" width={90} height={90} className="object-cover" />
                         </motion.div>
                     </div>
                     <div className="partnership-footer">
