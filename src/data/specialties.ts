@@ -24,8 +24,8 @@ export const specialtiesData = [
         title: "SaaS Platforms",
         description:
             "Multi-tenant architectures, subscription billing integrations, and scalable cloud infrastructure for modern SaaS products.",
-        frontImage: "/assets/projects/sms ver2.JPG",
-        backImage: "/assets/projects/remote managment system.JPG",
+        frontImage: "/assets/projects/sms-ver2.JPG",
+        backImage: "/assets/projects/remote-managment-system.JPG",
         color: "linear-gradient(135deg, #0B1017 0%, #1E3A8A 100%)",
         borderColor: "rgba(30, 58, 138, 0.3)",
         textColor: "#FFFFFF",
@@ -33,35 +33,35 @@ export const specialtiesData = [
             {
                 title: "SMS.bemydev Version 2",
                 desc: "This is an SMS bulk messaging portal working on the Seven.io API, having all features.",
-                image: "/assets/projects/sms ver2.JPG",
+                image: "/assets/projects/sms-ver2.JPG",
                 tags: ["Next.js", "PostgreSQL", "Telecom", "API"],
                 liveLink: "https://sms.bemydev.com"
             },
             {
                 title: "SMS Portal",
                 desc: "A scalable bulk SMS communication platform and management dashboard for businesses.",
-                image: "/assets/projects/sms portal.JPG",
+                image: "/assets/projects/sms-portal.JPG",
                 tags: ["Next.js", "PostgreSQL", "Telecom", "API", "MongoDB", "Docker"],
                 liveLink: "https://example.com"
             },
             {
                 title: "Remote Management System",
                 desc: "A comprehensive remote management platform for monitoring, analytics, and device control.",
-                image: "/assets/projects/remote managment system.JPG",
+                image: "/assets/projects/remote-managment-system.JPG",
                 tags: ["React", "Dashboard", "IoT", "Node.js", " SQL"],
                 liveLink: "https://example.com"
             },
             {
                 title: "Enterprise Workspace CRM",
                 desc: "A full-stack office management CRM with JWT authentication, task tracking, and analytics. Built with React and Node.js, and deployed via Docker on an aaPanel VPS.",
-                image: "/assets/projects/Office Task managment system version 2.JPG",
+                image: "/assets/projects/Office-Task-managment-system-version-2.JPG",
                 tags: ["React", "Node.js", "MongoDB", "Docker"],
                 liveLink: "https://example.com"
             },
             {
                 title: "SEO Maven",
                 desc: "A specialized platform built on WordPress for SEO linking, managing backlinks, and streamlining outreach workflows.",
-                image: "/assets/projects/seo maven.png",
+                image: "/assets/projects/seo-maven.png",
                 tags: ["WordPress", "SEO", "Link Building"],
                 liveLink: "https://example.com"
             },
@@ -86,7 +86,7 @@ export const specialtiesData = [
         title: "E-Commerce",
         description:
             "High-conversion platforms across e-commerce and business service sectors, including fashion retail and company formation systems, focusing on UX, scalability, and optimization.",
-        frontImage: "/assets/projects/shapio v2.JPG",
+        frontImage: "/assets/projects/shapio-v2.JPG",
         backImage: "/assets/projects/ecommerce2.jfif",
         color: "linear-gradient(135deg, #FFF1F2 0%, #FBCFE8 100%)",
         borderColor: "rgba(251, 207, 232, 0.3)",
@@ -102,7 +102,7 @@ export const specialtiesData = [
             {
                 title: "The Jackets Designer",
                 desc: "A fully functional e-commerce platform for premium leather jackets, featuring a bespoke custom-fit system, personalized sizing, and a luxury conversion-driven UI.",
-                image: "/assets/projects/ecommerce jacket desginer.png",
+                image: "/assets/projects/ecommerce-jacket-desginer.png",
                 tags: ["WordPress", "WooCommerce", "Custom-Fit", "UI/UX"],
                 liveLink: "https://thejacketsdesigner.com"
             },
@@ -123,14 +123,14 @@ export const specialtiesData = [
             {
                 title: "GrocerMax Deliveries",
                 desc: "Local grocery delivery network and inventory manager.",
-                image: "/assets/projects/Groccey store.png",
+                image: "/assets/projects/Groccey-store.png",
                 tags: ["React Native", "Firebase", "Stripe"],
                 liveLink: "https://example.com"
             },
             {
                 title: "Shapio Shapewear",
                 desc: "Shapio shapewear brings you a curated collection of women’s wear, combining elegance, comfort, and the latest fashion trends.",
-                image: "/assets/projects/shapio shapewear.png",
+                image: "/assets/projects/shapio-shapewear.png",
                 tags: ["WordPress", "WooCommerce", "Elementor"],
                 liveLink: "https://shapio.shop"
             },
@@ -183,7 +183,7 @@ export const specialtiesData = [
         description:
             "HIPAA-compliant platforms, patient management systems, and secure telemedicine solutions.",
         frontImage: "/assets/projects/doctors.jfif",
-        backImage: "/assets/projects/doctors 2.jfif",
+        backImage: "/assets/projects/doctors-2.jfif",
         color: "linear-gradient(135deg, #3CAEA3 0%, #FFFFFF 100%)",
         borderColor: "rgba(60, 174, 163, 0.3)",
         textColor: "#1E293B",
@@ -191,14 +191,14 @@ export const specialtiesData = [
             {
                 title: "Healthcare Digital Marketing Agency",
                 desc: "A specialized WordPress platform offering Local SEO, Google Ads, and reputation management to help clinics increase patient inquiries through customized, doctor-led strategies.",
-                image: "/assets/projects/doctors marketing.png",
+                image: "/assets/projects/doctors-marketing.png",
                 tags: ["WordPress", "Local SEO", "PPC", "Healthcare"],
                 liveLink: "https://example.com"
             },
             {
                 title: "Competitive Analysis Landing Page",
                 desc: "A lead-generation landing page designed to show doctors how they compare to competitors. Built with Elementor, it analyzes SEO, ads, and reviews to drive consultation bookings.",
-                image: "/assets/projects/doctors 2.png",
+                image: "/assets/projects/doctors-2.png",
                 tags: ["WordPress", "Elementor", "Lead Gen", "Marketing"],
                 liveLink: "https://example.com"
             }
@@ -209,8 +209,8 @@ export const specialtiesData = [
         title: "FinTech",
         description:
             "Secure financial dashboards, real-time transaction processing, and data visualization for financial insights.",
-        frontImage: "/assets/projects/coinband main.JPG",
-        backImage: "/assets/projects/coinband hover.JPG",
+        frontImage: "/assets/projects/coinband-main.JPG",
+        backImage: "/assets/projects/coinband-hover.JPG",
         color: "linear-gradient(135deg, #BCFF29 0%, #000000 100%)",
         borderColor: "rgba(188, 255, 41, 0.3)",
         textColor: "#FFFFFF",
@@ -245,3 +245,4 @@ export const specialtiesData = [
         ]
     },
 ];
+
