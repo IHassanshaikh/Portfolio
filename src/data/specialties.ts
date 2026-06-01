@@ -87,7 +87,7 @@ export const specialtiesData = [
         description:
             "High-conversion platforms across e-commerce and business service sectors, including fashion retail and company formation systems, focusing on UX, scalability, and optimization.",
         frontImage: "/assets/projects/shapio-v2.JPG",
-        backImage: "/assets/projects/ecommerce2.jfif",
+        backImage: "/assets/projects/ecommerce2.jpg",
         color: "linear-gradient(135deg, #FFF1F2 0%, #FBCFE8 100%)",
         borderColor: "rgba(251, 207, 232, 0.3)",
         textColor: "#9D174D",
@@ -182,8 +182,8 @@ export const specialtiesData = [
         title: "Healthcare",
         description:
             "HIPAA-compliant platforms, patient management systems, and secure telemedicine solutions.",
-        frontImage: "/assets/projects/doctors.jfif",
-        backImage: "/assets/projects/doctors-2.jfif",
+        frontImage: "/assets/projects/doctors.jpg",
+        backImage: "/assets/projects/doctors-2.jpg",
         color: "linear-gradient(135deg, #3CAEA3 0%, #FFFFFF 100%)",
         borderColor: "rgba(60, 174, 163, 0.3)",
         textColor: "#1E293B",
@@ -229,8 +229,8 @@ export const specialtiesData = [
         title: "E-Book Platform",
         description:
             "Digital publishing aggregators, interactive reader applications, and content management systems.",
-        frontImage: "/assets/projects/ebook.jfif",
-        backImage: "/assets/projects/ebook2.jfif",
+        frontImage: "/assets/projects/ebook.jpg",
+        backImage: "/assets/projects/ebook2.jpg",
         color: "linear-gradient(135deg, #FAE9D1 0%, #78350F 100%)",
         borderColor: "rgba(250, 233, 209, 0.3)",
         textColor: "#FFFFFF",
@@ -245,4 +245,5 @@ export const specialtiesData = [
         ]
     },
 ];
+
 

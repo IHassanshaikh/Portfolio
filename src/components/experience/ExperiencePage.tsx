@@ -29,7 +29,7 @@ const experiences = [
         date: '2024 - 2025',
         title: 'Web Developer Freelancer',
         company: 'Fiverr',
-        logo: '/assets/logos/fiverr_com_logo.jfif',
+        logo: '/assets/logos/fiverr_com_logo.jpg',
         desc: 'Worked as a freelance Web Developer focusing on frontend and web development projects.',
         details: [
             'Front-End Development and Web Development'
@@ -40,7 +40,7 @@ const experiences = [
         date: '2023 - 2025',
         title: 'Web Developer',
         company: 'Web Whiz',
-        logo: '/assets/logos/web_whiz_logo.jfif',
+        logo: '/assets/logos/web_whiz_logo.jpg',
         desc: 'My major role was to develop and maintain web applications, implement automation solutions, and optimize workflows to enhance efficiency and user experience.',
         details: [
             'React.js, JavaScript and +4 skills'
@@ -51,7 +51,7 @@ const experiences = [
         date: '2022 - 2023',
         title: 'Frontend Developer Intern',
         company: 'CodeAlpha',
-        logo: '/assets/logos/codealpha.jfif',
+        logo: '/assets/logos/codealpha.jpg',
         desc: 'Collaborated with a team to develop responsive web applications using React.js and Next.js.',
         details: [
             'Front-End Development, React js and +3 skills'
@@ -62,7 +62,7 @@ const experiences = [
         date: '2021 - 2022',
         title: 'Ex employee of Akbar ali & sons',
         company: 'Akber Ali & Sons',
-        logo: '/assets/logos/akber_ali_sons_logo.jfif',
+        logo: '/assets/logos/akber_ali_sons_logo.jpg',
         desc: 'Started my professional journey here.',
         details: []
     }
@@ -76,7 +76,7 @@ const certificates = [
         date: 'Jan 2026',
         skills: ['C++', 'Algorithms', 'DSA'],
         icon: <FiAward />,
-        link: '/assets/cerrtificates/smec.jfif'
+        link: '/assets/cerrtificates/smec.jpg'
     },
     {
         id: 2,
@@ -85,7 +85,7 @@ const certificates = [
         date: 'Sep 2024',
         skills: ['WordPress', 'Elementor', 'SEO'],
         icon: <FiCheckSquare />,
-        link: '/assets/cerrtificates/NS-training-wp.jfif'
+        link: '/assets/cerrtificates/NS-training-wp.jpg'
     },
     {
         id: 3,
@@ -94,7 +94,7 @@ const certificates = [
         date: 'Sep 2023',
         skills: ['Front-End Development'],
         icon: <FiCode />,
-        link: '/assets/cerrtificates/Codealpha-fronened.jfif'
+        link: '/assets/cerrtificates/Codealpha-fronened.jpg'
     },
     {
         id: 4,
@@ -103,7 +103,7 @@ const certificates = [
         date: '2023',
         skills: ['DSA', 'Problem Solving'],
         icon: <FiCpu />,
-        link: '/assets/cerrtificates/codealpha-DSA.jfif'
+        link: '/assets/cerrtificates/codealpha-DSA.jpg'
     },
     {
         id: 5,
@@ -112,7 +112,7 @@ const certificates = [
         date: '2023',
         skills: ['UI/UX', 'Figma'],
         icon: <FiAward />,
-        link: '/assets/cerrtificates/SMIT-UIUX.jfif'
+        link: '/assets/cerrtificates/SMIT-UIUX.jpg'
     },
     {
         id: 6,
@@ -121,7 +121,7 @@ const certificates = [
         date: 'Aug 2024',
         skills: ['Web Development'],
         icon: <FiGlobe />,
-        link: '/assets/cerrtificates/AS-commuinty-webdev.jfif'
+        link: '/assets/cerrtificates/AS-commuinty-webdev.jpg'
     },
     {
         id: 7,
@@ -130,7 +130,7 @@ const certificates = [
         date: '2024',
         skills: ['Tailwind CSS'],
         icon: <FiCode />,
-        link: '/assets/cerrtificates/tailwind-workshop.jfif'
+        link: '/assets/cerrtificates/tailwind-workshop.jpg'
     }
 ];
 
@@ -339,4 +339,5 @@ export default function ExperiencePage() {
         </main>
     );
 }
+
 
