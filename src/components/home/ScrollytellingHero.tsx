@@ -77,7 +77,6 @@ export default function ScrollytellingHero() {
     }, [smoothProgress]);
 
     const step = STORY_STEPS[currentStep];
-    const frameSrc = `/assets/frames/face-${padFrame(currentFrame)}.webp`;
 
     return (
         <div ref={containerRef} className="scrolly-wrapper">
@@ -87,11 +86,22 @@ export default function ScrollytellingHero() {
                     style={{ scale: imageScale, opacity: imageOpacity }}
                     className="scrolly-image-container"
                 >
-                    <img
-                        src={frameSrc}
-                        alt="3D Avatar Sequence"
-                        className="scrolly-face-img"
-                    />
+                    {Array.from({ length: FRAME_COUNT }).map((_, i) => {
+                        const frameNum = i + 1;
+                        return (
+                            <img
+                                key={frameNum}
+                                src={`/assets/frames/face-${padFrame(frameNum)}.webp`}
+                                alt={frameNum === 1 ? "3D Avatar Sequence" : ""}
+                                className="scrolly-face-img"
+                                style={{
+                                    display: currentFrame === frameNum ? 'block' : 'none',
+                                }}
+                                // Force high priority fetch for the first frame
+                                fetchPriority={frameNum === 1 ? 'high' : 'auto'}
+                            />
+                        );
+                    })}
                 </motion.div>
 
                 <div className="scrolly-overlay" />
