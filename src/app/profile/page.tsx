@@ -347,49 +347,49 @@ export default function ProfilePage() {
                                     issuer: 'SMEC\'26',
                                     date: 'Issued Jan 2026',
                                     skills: 'C++, DSA and +1 skill',
-                                    img: '/assets/cerrtificates/smec.jfif'
+                                    img: '/assets/cerrtificates/smec.jpg'
                                 },
                                 {
                                     name: 'Wordpress',
                                     issuer: 'NS Training (SMC-PRIVATE) Limited',
                                     date: 'Issued Sep 2024',
                                     skills: 'WordPress and Elementor',
-                                    img: '/assets/cerrtificates/NS training wp.jfif'
+                                    img: '/assets/cerrtificates/NS-training-wp.jpg'
                                 },
                                 {
                                     name: 'Frontend Developer Intern',
                                     issuer: 'CodeAlpha',
                                     date: 'Issued Sep 2023',
                                     skills: 'Front-End Development',
-                                    img: '/assets/cerrtificates/Codealpha fronened.jfif'
+                                    img: '/assets/cerrtificates/Codealpha-fronened.jpg'
                                 },
                                 {
                                     name: 'Data Structure and Algorithm (DSA)',
                                     issuer: 'CodeAlpha',
                                     date: 'Issued 2023',
                                     skills: 'DSA, Problem Solving',
-                                    img: '/assets/cerrtificates/codealpha DSA.jfif'
+                                    img: '/assets/cerrtificates/codealpha-DSA.jpg'
                                 },
                                 {
                                     name: 'UI/UX Designing',
                                     issuer: 'SMIT',
                                     date: 'Issued 2023',
                                     skills: 'UI/UX, Figma',
-                                    img: '/assets/cerrtificates/SMIT UIUX.jfif'
+                                    img: '/assets/cerrtificates/SMIT-UIUX.jpg'
                                 },
                                 {
                                     name: 'Web Development Course',
                                     issuer: 'AS Community HUB',
                                     date: 'Issued Aug 2024',
                                     skills: 'Web Development',
-                                    img: '/assets/cerrtificates/AS commuinty webdev.jfif'
+                                    img: '/assets/cerrtificates/AS-commuinty-webdev.jpg'
                                 },
                                 {
                                     name: 'Tailwind CSS Workshop',
                                     issuer: 'Workshop',
                                     date: 'Issued 2024',
                                     skills: 'Tailwind CSS',
-                                    img: '/assets/cerrtificates/tailwind workshop.jfif'
+                                    img: '/assets/cerrtificates/tailwind-workshop.jpg'
                                 }
                             ].map((cert, i) => (
                                 <div key={i} className="linkedin-list-item">
@@ -477,3 +477,4 @@ export default function ProfilePage() {
         </main>
     );
 }
+

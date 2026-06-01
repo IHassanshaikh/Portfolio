@@ -62,7 +62,7 @@ export default function ExperienceList() {
                         <div className="exp-date">2024 - 2025</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/fiverr_com_logo.jfif"
+                                src="/assets/logos/fiverr_com_logo.jpg"
                                 alt="Fiverr Logo"
                                 width={60}
                                 height={60}
@@ -84,7 +84,7 @@ export default function ExperienceList() {
                         <div className="exp-date">2023 - 2025</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/web_whiz_logo.jfif"
+                                src="/assets/logos/web_whiz_logo.jpg"
                                 alt="Web Whiz Logo"
                                 width={60}
                                 height={60}
@@ -106,7 +106,7 @@ export default function ExperienceList() {
                         <div className="exp-date">2022 - 2023</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/codealpha.jfif"
+                                src="/assets/logos/codealpha.jpg"
                                 alt="CodeAlpha Logo"
                                 width={60}
                                 height={60}
@@ -127,7 +127,7 @@ export default function ExperienceList() {
                         <div className="exp-date">2021 - 2022</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/akber_ali_sons_logo.jfif"
+                                src="/assets/logos/akber_ali_sons_logo.jpg"
                                 alt="Akbar Ali & Sons Logo"
                                 width={60}
                                 height={60}
@@ -152,7 +152,7 @@ export default function ExperienceList() {
                             <div className="edu-header">
                                 <div className="edu-logo">
                                     <Image
-                                        src="/assets/logos/iqra uni logo.jfif"
+                                        src="/assets/logos/iqra-uni-logo.jpg"
                                         alt="Iqra University Logo"
                                         width={50}
                                         height={50}
@@ -202,3 +202,4 @@ export default function ExperienceList() {
         </section>
     );
 }
+

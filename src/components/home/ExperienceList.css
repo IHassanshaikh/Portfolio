@@ -235,6 +235,7 @@
     margin-bottom: 2rem;
 }
 
+.edu-logo img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px; }
 .edu-logo {
     width: 60px;
     height: 60px;
@@ -358,3 +359,4 @@
         gap: 1rem;
     }
 }
+
