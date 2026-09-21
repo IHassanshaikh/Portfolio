@@ -55,23 +55,68 @@ export default function AIAssistantWidget() {
     }, [messages, isOpen]);
 
     const getAIResponse = (query: string): string => {
-        const lower = query.toLowerCase();
-        if (lower.includes('stack') || lower.includes('skill') || lower.includes('tech') || lower.includes('language')) {
-            return `${KNOWLEDGE_BASE.skills} Is there a specific framework or tool you'd like to ask about?`;
+        const lower = query.trim().toLowerCase();
+        
+        // 1. Greetings & Chit-chat
+        const greetings = ['hi', 'hello', 'hey', 'hy', 'hlo', 'helo', 'howdy', 'sup', 'greetings', 'good morning', 'good evening', 'good afternoon'];
+        if (greetings.some(g => lower === g || lower.startsWith(g + ' ') || lower.endsWith(' ' + g))) {
+            return "👋 Hello! Great to meet you. I'm Hassan's AI Assistant. How can I help you today? You can ask me about his tech stack, AI projects, services, or how to get in touch for a project!";
         }
-        if (lower.includes('freelance') || lower.includes('available') || lower.includes('hire') || lower.includes('work')) {
-            return `${KNOWLEDGE_BASE.availability} You can book a consultation or send him a message directly via WhatsApp or email!`;
+
+        if (lower.includes('how are you') || lower.includes('how r u') || lower.includes("what's up") || lower.includes('wbu')) {
+            return "I'm doing great, thank you for asking! 🤖 Ready to help you explore Hassan's work or discuss potential project collaborations. What are you looking to build?";
         }
-        if (lower.includes('ai') || lower.includes('bot') || lower.includes('automation') || lower.includes('project')) {
-            return `${KNOWLEDGE_BASE.projects} Would you like to view his full work portfolio?`;
+
+        if (lower.includes('thank') || lower.includes('thanks') || lower.includes('thx') || lower.includes('ty')) {
+            return "You're very welcome! 😊 Let me know if you need anything else or want to connect directly with Hassan.";
         }
-        if (lower.includes('contact') || lower.includes('email') || lower.includes('phone') || lower.includes('reach') || lower.includes('whatsapp')) {
+
+        // 2. Services & Capabilities
+        if (lower.includes('service') || lower.includes('offer') || lower.includes('build') || lower.includes('website') || lower.includes('app') || lower.includes('create') || lower.includes('develop')) {
+            return `${KNOWLEDGE_BASE.services} Do you have a specific project in mind that you'd like to discuss?`;
+        }
+
+        // 3. Rates & Pricing
+        if (lower.includes('price') || lower.includes('cost') || lower.includes('rate') || lower.includes('budget') || lower.includes('charge') || lower.includes('how much')) {
+            return "Hassan offers flexible project-based pricing and hourly rates depending on project scope and complexity. Reach out via WhatsApp (+92 310 1022778) or Email (hassanshaikh9717@gmail.com) for a free custom quote!";
+        }
+
+        // 4. Tech Stack & Skills
+        if (lower.includes('stack') || lower.includes('skill') || lower.includes('tech') || lower.includes('language') || lower.includes('react') || lower.includes('next') || lower.includes('python') || lower.includes('node')) {
+            return `${KNOWLEDGE_BASE.skills} Hassan builds pixel-perfect, scalable web apps and high-performance backend systems.`;
+        }
+
+        // 5. Availability & Freelance
+        if (lower.includes('freelance') || lower.includes('available') || lower.includes('hire') || lower.includes('work') || lower.includes('full-time') || lower.includes('contract')) {
+            return `${KNOWLEDGE_BASE.availability} You can message him directly on WhatsApp or Email to get started immediately!`;
+        }
+
+        // 6. Experience & Project Count
+        if (lower.includes('experience') || lower.includes('years') || lower.includes('many project') || lower.includes('portfolio') || lower.includes('delivered')) {
+            return "Hassan has over 4+ years of hands-on software development experience and has successfully delivered 50+ projects globally across E-Commerce, SaaS, AI Automation, Healthcare, and FinTech.";
+        }
+
+        // 7. AI & Bot Work
+        if (lower.includes('ai') || lower.includes('bot') || lower.includes('automation') || lower.includes('llm') || lower.includes('openai') || lower.includes('langchain')) {
+            return `${KNOWLEDGE_BASE.projects} He builds custom AI agents, RAG systems, and LLM integrations for business automation.`;
+        }
+
+        // 8. Contact & Socials
+        if (lower.includes('contact') || lower.includes('email') || lower.includes('phone') || lower.includes('reach') || lower.includes('whatsapp') || lower.includes('message') || lower.includes('number')) {
             return `${KNOWLEDGE_BASE.contact}`;
         }
+
+        // 9. Location & Timezone
+        if (lower.includes('where') || lower.includes('location') || lower.includes('country') || lower.includes('city') || lower.includes('timezone') || lower.includes('pakistan') || lower.includes('karachi')) {
+            return "Hassan is based in Karachi, Pakistan (PKT, UTC+5), but works seamlessly with clients across global time zones including the US, UK, Europe, and Middle East.";
+        }
+
+        // 10. Bio & About
         if (lower.includes('who') || lower.includes('hassan') || lower.includes('about')) {
             return `${KNOWLEDGE_BASE.bio}`;
         }
-        return `Hassan is a Full-Stack Developer & AI Automation Engineer with 50+ projects delivered. ${KNOWLEDGE_BASE.contact} Feel free to ask about his stack, projects, or availability!`;
+
+        return `Thanks for asking! Hassan is a Full-Stack Developer & AI Automation Engineer with 50+ projects delivered. Feel free to ask about his skills, AI projects, rates, or click the WhatsApp button to message him directly!`;
     };
 
     const handleSend = (textToSend?: string) => {
