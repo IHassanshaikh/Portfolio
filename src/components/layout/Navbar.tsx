@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { FiHome, FiBriefcase, FiCode, FiFileText, FiUser, FiMail } from 'react-icons/fi';
+import { FiHome, FiBriefcase, FiCode, FiFileText, FiUser, FiMail, FiImage } from 'react-icons/fi';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import './Navbar.css';
@@ -20,6 +20,7 @@ export default function Navbar() {
         { name: 'Work', path: '/work', icon: <FiCode /> },
         { name: 'CV', path: '/cv', icon: <FiFileText /> },
         { name: 'Profile', path: '/profile', icon: <FiUser /> },
+        { name: 'Gallery', path: '/gallery', icon: <FiImage /> },
         { name: 'Contact Me', path: 'https://wa.me/923101022778', icon: <FiMail /> }
     ];
 
@@ -38,18 +39,18 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="navbar-logo">
                         <Image
-                            src="/assets/logos/logomain.png"
+                            src="/assets/logos/logomain.webp"
                             alt="Logo"
-                            width={120}
+                            width={48}
                             height={40}
                             style={{ height: 'auto', width: 'auto' }}
                             priority
                         />
                     </Link>
 
-                    {/* Desktop Navigation Links (First 5 items) */}
+                    {/* Desktop Navigation Links (First 6 items) */}
                     <ul className="navbar-links">
-                        {navItems.slice(0, 5).map((item) => (
+                        {navItems.slice(0, 6).map((item) => (
                             <motion.li key={item.name} className="nav-item" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                 <Link
                                     href={item.path}
@@ -65,8 +66,8 @@ export default function Navbar() {
                     <div className="navbar-actions" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <ThemeToggle />
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Link href={navItems[5].path} className="btn btn-contact-nav">
-                                {navItems[5].name}
+                            <Link href={navItems[6].path} className="btn btn-contact-nav">
+                                {navItems[6].name}
                             </Link>
                         </motion.div>
                     </div>
@@ -84,6 +85,7 @@ export default function Navbar() {
                                 key={item.name}
                                 href={item.path}
                                 className={`mobile-dock-item ${isActive ? 'active' : ''}`}
+                                aria-label={item.name}
                             >
                                 <span className="dock-icon">{item.icon}</span>
                                 <AnimatePresence>

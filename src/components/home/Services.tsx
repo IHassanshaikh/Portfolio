@@ -11,7 +11,7 @@ const services = [
     },
     {
         title: 'AI Automation Solutions',
-        desc: 'Custom workflows and automated systems powered by AI to streamline business processes.',
+        desc: 'Custom workflows, AI voice agents, and automated systems powered by AI to streamline business processes.',
         icon: <FiCpu />
     },
     {
@@ -20,19 +20,29 @@ const services = [
         icon: <FiMessageSquare />
     },
     {
+        title: 'WordPress & WooCommerce',
+        desc: 'Custom WordPress websites and WooCommerce stores with plugins, themes, and performance optimization.',
+        icon: <FiGlobe />
+    },
+    {
+        title: 'Shopify Development',
+        desc: 'Complete Shopify store setup, theme customization, and conversion-optimized eCommerce experiences.',
+        icon: <FiShoppingBag />
+    },
+    {
         title: 'API Development & Integration',
         desc: 'Secure and efficient server-side logic and third-party API connectivity.',
         icon: <FiSettings />
     },
     {
         title: 'Workflow Automation Systems',
-        desc: 'Automating repetitive tasks through custom integrations and intelligent logic.',
+        desc: 'Automating repetitive tasks through custom integrations, AI pipelines, and intelligent logic.',
         icon: <FiTrendingUp />
     },
     {
-        title: 'E-commerce Website Development',
-        desc: 'Modern online stores built on Shopify, WordPress, or custom platforms.',
-        icon: <FiShoppingBag />
+        title: 'Cloud Hosting & Deployment',
+        desc: 'VPS setup, deployment pipelines, and server management for reliable, scalable infrastructure.',
+        icon: <FiDatabase />
     }
 ];
 

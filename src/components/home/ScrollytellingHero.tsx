@@ -14,9 +14,9 @@ const STORY_STEPS = [
     {
         start: 0,
         end: 0.5,
-        greeting: "👋 Hey! It's me Muhammad Hassan,",
+        greeting: "👋 Hey! It's me Hassan,",
         title: "Crafting <span class='scrolly-highlight'>purpose driven</span> experiences.",
-        sub: "Full-Stack Developer · AI Automation Engineer"
+        sub: "Full-Stack Developer · AI Automation · 50+ Projects Delivered"
     },
     {
         start: 0.5,
@@ -94,8 +94,12 @@ export default function ScrollytellingHero() {
                                 src={`/assets/frames/face-${padFrame(frameNum)}.webp`}
                                 alt={frameNum === 1 ? "3D Avatar Sequence" : ""}
                                 className="scrolly-face-img"
+                                width="1280"
+                                height="720"
                                 style={{
                                     display: currentFrame === frameNum ? 'block' : 'none',
+                                    width: '100%',
+                                    height: 'auto'
                                 }}
                                 // Force high priority fetch for the first frame
                                 fetchPriority={frameNum === 1 ? 'high' : 'auto'}

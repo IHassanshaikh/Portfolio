@@ -59,7 +59,7 @@ export default function TechStack() {
                 <div className="abstract-element-pos">
                     <img
                         ref={circleRef as React.RefObject<HTMLImageElement>}
-                        src="/assets/images/animated-circle.png"
+                        src="/assets/images/animated-circle.webp"
                         alt="Animated Circle"
                         className="abstract-image"
                     />

@@ -17,21 +17,21 @@ export default function About() {
                     </h2>
 
                     <p className="about-desc">
-                        I am Muhammad Hassan, a Final-Year Bachelor of Computer Science (BSCS) student at Iqra University, Karachi, and a passionate Full-Stack Developer and AI Automation Engineer. I specialize in building scalable web applications, intelligent automation systems, and modern digital solutions that help businesses operate more efficiently.
+                        I'm Muhammad Hassan — a Full-Stack & AI Automation Developer at TechTide Co., building practical web solutions, intelligent automations, and digital experiences that solve real business problems. I work across React, Next.js, WordPress, WooCommerce, Shopify, Python, and API integrations.
                     </p>
 
                     <p className="about-desc">
-                        Currently, I am working at Tech Tide LLC as a Full-Stack and AI Automation Developer, where I focus on developing high-performance web applications, automating workflows, and integrating AI-driven technologies to improve productivity and system scalability.
+                        I've built AI-focused products like HumanCall, an AI voice automation platform for sales and support, and SAFE HER, an AI-powered harassment reporting system pitched at NIC Karachi. Whether it's a business website, eCommerce platform, or an agentic workflow — I enjoy taking ideas from concept to a working product.
                     </p>
 
                     <p className="about-desc">
-                        With strong experience in modern full-stack development, I work extensively with technologies such as React.js, Next.js, Node.js, and Python, along with database systems and API integrations. My work emphasizes writing clean, maintainable code while delivering reliable and user-focused solutions.
+                        With 50+ projects delivered and strong experience in full-stack development, AI automation, and cloud hosting, I focus on shipping clean, scalable solutions that support real users and growing businesses.
                     </p>
 
                     <div className="about-socials">
-                        <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" className="social-icon" target="_blank" rel="noopener noreferrer"><FiLinkedin /></a>
-                        <a href="https://github.com/IHassanshaikh" className="social-icon" target="_blank" rel="noopener noreferrer"><FiGithub /></a>
-                        <a href="https://www.instagram.com/hassan.techlife/" className="social-icon" target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
+                        <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><FiLinkedin /></a>
+                        <a href="https://github.com/IHassanshaikh" className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><FiGithub /></a>
+                        <a href="https://www.instagram.com/hassan.techlife/" className="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile"><FiInstagram /></a>
                     </div>
 
                     <a href="#" className="dive-deeper">
@@ -46,33 +46,36 @@ export default function About() {
                             <div className="carousel-item item-1">
                                 <Image
                                     src="/assets/images/img4.webp"
-                                    alt="Profile Photo"
-                                    width={300}
-                                    height={400}
-                                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                                    alt="Hassan at work"
+                                    width={200}
+                                    height={350}
+                                    style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%' }}
                                     priority={false}
+                                    sizes="200px"
                                 />
                             </div>
-                            {/* Image 2 - Home 2 */}
+                            {/* Image 2 */}
                             <div className="carousel-item item-2">
                                 <Image
                                     src="/assets/images/img2.webp"
-                                    alt="Home 2"
-                                    width={300}
-                                    height={400}
-                                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                                    alt="Hassan professional"
+                                    width={200}
+                                    height={350}
+                                    style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%' }}
                                     priority={false}
+                                    sizes="200px"
                                 />
                             </div>
-                            {/* Image 3 - Home 3 */}
+                            {/* Image 3 */}
                             <div className="carousel-item item-3">
                                 <Image
-                                    src="/assets/images/img6.webp"
-                                    alt="Home 3"
-                                    width={300}
-                                    height={400}
-                                    style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                                    src="/assets/events/Ai baithak.jpeg"
+                                    alt="Ai baithak"
+                                    width={200}
+                                    height={350}
+                                    style={{ objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%' }}
                                     priority={false}
+                                    sizes="200px"
                                 />
                             </div>
                         </div>

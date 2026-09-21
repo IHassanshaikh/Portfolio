@@ -77,7 +77,7 @@ export default function Testimonials() {
                     <p className="testimonials-desc">
                         I've worked with some amazing people over the years, here is what they have to say about me.
                     </p>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="t-link">
+                    <a href="https://www.linkedin.com/in/thehassanshaikhh/" target="_blank" rel="noopener noreferrer" className="t-link">
                         Check it out on Linkedin <FiArrowUpRight />
                     </a>
                 </div>

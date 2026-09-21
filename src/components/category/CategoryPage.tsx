@@ -40,7 +40,7 @@ export default function CategoryPage({ slug }: CategoryPageProps) {
                             </div>
                             {/* Standard img tag is used here so full-height screenshots can expand naturally without cropping */}
                             <img
-                                src={proj.image || "/assets/images/placeholder.jpg"}
+                                src={proj.image || "/assets/images/placeholder.webp"}
                                 alt={proj.title}
                                 className="category-project-img"
                                 loading="lazy"
@@ -59,14 +59,20 @@ export default function CategoryPage({ slug }: CategoryPageProps) {
                             </div>
 
                             <div className="category-project-footer">
-                                <a 
-                                    href={proj.liveLink} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="btn-live-link"
-                                >
-                                    View Live Project &nearr;
-                                </a>
+                                {proj.liveLink !== "private" ? (
+                                    <a 
+                                        href={proj.liveLink} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="btn-live-link"
+                                    >
+                                        View Live Project ↗
+                                    </a>
+                                ) : (
+                                    <span className="btn-live-link" style={{ cursor: 'default', opacity: 0.8 }}>
+                                        Run on private server
+                                    </span>
+                                )}
                             </div>
                         </div>
                     </article>

@@ -42,9 +42,9 @@ export default function ProfilePage() {
                                         <h2 className="profile-name-text">Hassan Shaikh</h2>
 
                                     </div>
-                                    <p className="profile-headline-text">Full-Stack and AI Automation Developer at @TechtideLLC | BSCS Student</p>
+                                    <p className="profile-headline-text">Full-Stack & AI Automation Developer at @TechTideLLC | 50+ Projects Delivered | React, WordPress, Shopify | Building Scalable Web Systems & AI-Powered Automations</p>
                                     <div className="profile-location-info">
-                                        <span>Karachi Division, Sindh, Pakistan</span>
+                                        <span>Karāchi, Sindh, Pakistan</span>
                                         <span className="contact-info-link">Contact info</span>
                                     </div>
                                     <div className="github-link-row">
@@ -52,7 +52,6 @@ export default function ProfilePage() {
                                             GitHub <FiExternalLink size={14} />
                                         </a>
                                     </div>
-                                    <a href="#" className="connections-link">500+ connections</a>
                                 </div>
                                 <div style={{ textAlign: 'right', fontSize: '14px', fontWeight: 600 }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
@@ -113,35 +112,42 @@ export default function ProfilePage() {
                             <h3 className="widget-title">About</h3>
                         </div>
                         <div style={{ fontSize: '14px', lineHeight: 1.6, color: 'rgb(var(--foreground))' }}>
-                            <p style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 600, marginBottom: '12px' }}>
-                                🚀 Final-Year BSCS Student | Full-Stack Web Developer | AI & Automation Enthusiast
-                            </p>
-
                             {!isAboutExpanded ? (
                                 <p>
-                                    I’m a Final-Year BS Computer Science student at Iqra University Karachi, passionate about building innovative and impactful technology solutions...
+                                    I’m a Full-Stack & AI Automation Developer focused on building practical web solutions, intelligent automations, and digital experiences that solve real business problems...
                                     <span className="show-more" onClick={() => setIsAboutExpanded(true)}>see more</span>
                                 </p>
                             ) : (
                                 <div className="about-full-content">
                                     <p style={{ marginBottom: '12px' }}>
-                                        I’m a Final-Year BS Computer Science student at Iqra University Karachi, passionate about building innovative and impactful technology solutions.
+                                        I’m a Full-Stack & AI Automation Developer focused on building practical web solutions, intelligent automations, and digital experiences that solve real business problems.
                                     </p>
-                                    <p style={{ fontWeight: 600, marginBottom: '4px' }}>💻 Professional Experience:</p>
                                     <p style={{ marginBottom: '12px' }}>
-                                        Currently working at Tide Tech as a Developer, focusing on web development and automation to create efficient, scalable solutions.
+                                        I work across full-stack development, AI automation, WordPress, WooCommerce, Shopify, React, React Native, Python, and API integrations. I enjoy taking an idea from concept to a working product, whether it’s a business website, eCommerce platform, internal system, AI agent, or automated workflow.
                                     </p>
-                                    <p style={{ fontWeight: 600, marginBottom: '4px' }}>🛠️ Technical Skills:</p>
+                                    <p style={{ fontWeight: 600, marginBottom: '8px' }}>My core areas include:</p>
+                                    <ul style={{ listStyleType: 'none', paddingLeft: 0, marginBottom: '12px', lineHeight: 1.8 }}>
+                                        <li>• Full-Stack Web Development</li>
+                                        <li>• AI & Agentic Automation</li>
+                                        <li>• AI Voice Agents & Calling Systems</li>
+                                        <li>• WordPress & WooCommerce</li>
+                                        <li>• Shopify Development</li>
+                                        <li>• React & React Native</li>
+                                        <li>• Python & Automation</li>
+                                        <li>• API & Third-Party Integrations</li>
+                                        <li>• Website Performance & Optimization</li>
+                                    </ul>
                                     <p style={{ marginBottom: '12px' }}>
-                                        With growing expertise in Python and a strong background in full-stack web development (React, Next.js, Node.js). Enthusiastic about exploring AI automation and emerging technologies.
+                                        I’ve also worked on AI-focused products such as HumanCall, an AI voice automation platform for sales, support, lead qualification, and appointment scheduling, and SAFE HER, an AI-powered harassment reporting and emotional support platform that I developed and pitched as a startup concept at NIC.
                                     </p>
-                                    <p style={{ fontWeight: 600, marginBottom: '4px' }}>☕ Beyond Tech:</p>
                                     <p style={{ marginBottom: '12px' }}>
-                                        A tea enthusiast and cricket lover, I believe in maintaining a healthy balance between work and play.
+                                        Alongside my professional work, I’m completing my BS in Computer Science at Iqra University, Karachi. I’m continuously exploring how AI and software development can be combined to build useful products and automate repetitive business processes.
                                     </p>
-                                    <p style={{ fontWeight: 600, marginBottom: '4px' }}>📢 Open to Opportunities:</p>
+                                    <p style={{ marginBottom: '12px' }}>
+                                        Outside of development, I’m usually following cricket, working on a new idea, or having a cup of tea.
+                                    </p>
                                     <p>
-                                        Always excited to connect with professionals, collaborate on projects, and explore opportunities in web development, AI automation, and software engineering.
+                                        I’m always open to connecting with developers, founders, businesses, and technology professionals for collaborations, interesting projects, and new opportunities.
                                     </p>
                                     <span className="show-more" onClick={() => setIsAboutExpanded(false)} style={{ display: 'block', marginTop: '12px' }}>see less</span>
                                 </div>
@@ -150,7 +156,7 @@ export default function ProfilePage() {
                             <div className="top-skills-box">
                                 <h4><FiAward /> Top skills</h4>
                                 <p className="top-skills-list">
-                                    Agentic AI Development • Generative AI • Cloud Computing (VPS) • Machine Learning • Python • OpenAI API • React.js • Next.js
+                                    Full-Stack Development • Web Development • Generative AI • Agentic Automation • Large Language Models (LLM)
                                 </p>
                                 <FiArrowRight className="arrow-right" />
                             </div>
@@ -179,23 +185,26 @@ export default function ProfilePage() {
                                     </div>
                                 </div>
                                 <div className="post-content" style={{ fontSize: '13px', lineHeight: 1.5 }}>
-                                    <p style={{ fontWeight: 600, marginBottom: '8px' }}>REPRESENTING INNOVATION AT THE AI WRAPPER COMPETITION 2025!</p>
+                                    <p style={{ fontWeight: 600, marginBottom: '8px' }}>CONTRIBUTING TO MINDTREK 2.0!</p>
                                     {!isPostExpanded ? (
                                         <p style={{ marginBottom: '8px' }}>
-                                            Thrilled to have presented our project "<strong>SAFE HER</strong>" an <strong>AI-BASED HARASSMENT REPORTING & EMOTIONAL SUPPORT BOT</strong> at the <strong>REGIONAL ROUND OF THE AI WRAPPER...</strong> <span className="show-more" onClick={() => setIsPostExpanded(true)} style={{ color: 'rgb(var(--muted))', cursor: 'pointer', fontWeight: 600 }}>see more</span>
+                                            Every successful event is the result of teamwork, dedication, and countless hours behind the scenes. I’m grateful to have contributed as a Team Member for MindTrek 2.0 The Visionaries Circle, organized by MindTrek... <span className="show-more" onClick={() => setIsPostExpanded(true)} style={{ color: 'rgb(var(--muted))', cursor: 'pointer', fontWeight: 600 }}>see more</span>
                                         </p>
                                     ) : (
                                         <>
-                                            <p style={{ marginBottom: '8px' }}>Thrilled to have presented our project "<strong>SAFE HER</strong>" an <strong>AI-BASED HARASSMENT REPORTING & EMOTIONAL SUPPORT BOT</strong> at the <strong>REGIONAL ROUND OF THE AI WRAPPER COMPETITION 2025</strong>, held at <span style={{ color: '#0a66c2', fontWeight: 600 }}>National Incubation Center Karachi</span>, organized by <span style={{ color: '#0a66c2', fontWeight: 600 }}>Ignite - National Technology Fund</span> and <span style={{ color: '#0a66c2', fontWeight: 600 }}>Tech Nation</span></p>
-                                            <p style={{ marginBottom: '8px' }}>Our project aims to leverage <strong>ARTIFICIAL INTELLIGENCE (AI), NATURAL LANGUAGE PROCESSING (NLP)</strong>, and <strong>AUTOMATION</strong> to create a <strong>SAFER, SMARTER & MORE EMPATHETIC DIGITAL ENVIRONMENT FOR WOMEN</strong> truly <strong>COMBINING TECHNOLOGY WITH PURPOSE.</strong></p>
-                                            <p style={{ marginBottom: '8px' }}>Grateful to my amazing teammate <span style={{ color: '#0a66c2', fontWeight: 600 }}>Rahima Khurram</span> for her collaboration and to <span style={{ color: '#0a66c2', fontWeight: 600 }}>Ignite - National Technology Fund</span> for hosting such an <strong>INSPIRING EVENT DRIVING AI INNOVATION IN PAKISTAN.</strong></p>
-                                            <p style={{ color: '#0a66c2', fontWeight: 600, marginBottom: '8px' }}>#AIWrapperCompetition #Ignite #TechNationPakistan #NICKarachi #AI #Innovation #WomenSafety #SafeHer #Teamwork #ArtificialIntelligence</p>
+                                            <p style={{ marginBottom: '8px' }}>
+                                                Every successful event is the result of teamwork, dedication, and countless hours behind the scenes. I’m grateful to have contributed as a Team Member for <strong>MindTrek 2.0 The Visionaries Circle</strong>, organized by <span style={{ color: '#0a66c2', fontWeight: 600 }}>MindTrek</span>.
+                                            </p>
+                                            <p style={{ marginBottom: '8px' }}>
+                                                It was an amazing experience collaborating with such a driven team to make this event a reality. A huge shoutout to everyone involved!
+                                            </p>
+                                            <p style={{ color: '#0a66c2', fontWeight: 600, marginBottom: '8px' }}>#MindTrek #Teamwork #Innovation #EventManagement #Karachi</p>
                                             <span className="show-more" onClick={() => setIsPostExpanded(false)} style={{ color: 'rgb(var(--muted))', cursor: 'pointer', fontWeight: 600, display: 'block', marginTop: '8px' }}>see less</span>
                                         </>
                                     )}
                                 </div>
                                 <div className="post-image" style={{ width: '100%', borderRadius: '8px', overflow: 'hidden', marginTop: '12px', border: '1px solid rgba(var(--foreground), 0.1)', display: 'flex', justifyContent: 'center', background: 'rgba(var(--foreground), 0.02)' }}>
-                                    <img src="/assets/images/img6.webp" alt="AI Wrapper Competition" style={{ maxHeight: '650px', width: 'auto', maxWidth: '100%', objectFit: 'contain', display: 'block' }} />
+                                    <img src="/assets/events/Mindtrek.jpeg" alt="MindTrek 2.0" style={{ maxHeight: '650px', width: 'auto', maxWidth: '100%', objectFit: 'contain', display: 'block' }} />
                                 </div>
                             </div>
                         </div>
@@ -210,41 +219,43 @@ export default function ProfilePage() {
                         <div className="linkedin-list">
                             {[
                                 {
-                                    role: 'Full Stack and AI Automation Developer',
-                                    company: 'Tech Tide LLC • Full-time',
-                                    date: '2025 - Present • 1 yr 5 mos',
-                                    location: 'Karachi, Sindh, Pakistan • Hybrid',
-                                    desc: 'Currently working at Tide Tech as a Developer & Automation Specialist, where my major role is to develop and optimize web applications, automate workflows, and integrate AI-driven solutions to improve efficiency and scalability',
-                                    skills: 'React js, Automation and +12 skills'
+                                    role: 'Full-Stack & AI Automation Developer',
+                                    company: 'TechTide Co. • Full-time',
+                                    date: 'Feb 2025 - Present • 1 yr 8 mos',
+                                    location: 'Karāchi, Sindh, Pakistan • Hybrid',
+                                    desc: 'Develop and optimize web applications, eCommerce platforms, and AI-powered automation systems for real-world business workflows. • Build and maintain solutions using WordPress, Shopify, React, and modern web technologies. • Design AI and agentic automation workflows to reduce repetitive manual tasks. • Integrate APIs, AI models, chatbots, and third-party services into web applications. • Manage deployment, hosting, VPS environments, and performance optimization. • Research and implement scalable AI-driven solutions based on business requirements.',
+                                    skills: 'Agentic AI Development, WordPress and +12 skills'
                                 },
                                 {
-                                    role: 'Web Developer Freelancer',
+                                    role: 'Freelance Web Developer',
                                     company: 'Fiverr • Freelance',
-                                    date: '2024 - Sep 2025 • 1 yr 9 mos',
+                                    date: 'Aug 2024 - Sep 2025 • 1 yr 2 mos',
                                     location: 'Remote',
-                                    skills: 'Front-End Development and Web Development'
+                                    desc: 'Worked with clients on website development, customization, responsive design, and performance improvements using WordPress and modern web technologies.',
+                                    skills: 'Web Development'
                                 },
                                 {
                                     role: 'Web Developer',
                                     company: 'Web Whiz • Full-time',
-                                    date: 'Feb 2023 - Sep 2025 • 2 yrs 8 mos',
+                                    date: 'Feb 2023 - Jan 2025 • 2 yrs',
                                     location: 'Pakistan • On-site',
                                     desc: 'My major role was to develop and maintain web applications, implement automation solutions, and optimize workflows to enhance efficiency and user experience.',
-                                    skills: 'React.js, JavaScript and +4 skills'
+                                    skills: 'Web Development and JavaScript'
                                 },
                                 {
                                     role: 'Frontend Developer Intern',
                                     company: 'CodeAlpha • Internship',
-                                    date: 'Dec 2022 - Sep 2023 • 10 mos',
+                                    date: 'Dec 2023 - Nov 2024 • 1 yr',
                                     location: 'India • Remote',
-                                    desc: 'Collaborated with a team to develop responsive web applications using React.js and Next.js.',
-                                    skills: 'Front-End Development, React js and +3 skills'
+                                    desc: 'Built responsive frontend projects using React.js, Next.js, HTML, CSS, and JavaScript while strengthening practical development and problem-solving skills.',
+                                    skills: 'React js and JavaScript'
                                 },
                                 {
-                                    role: 'Ex employee of Akbar ali & sons',
+                                    role: 'IT Support',
                                     company: 'Akber Ali & Sons • Full-time',
-                                    date: 'Aug 2021 - Sep 2022 • 1 yr 2 mos',
-                                    location: 'Karachi, Sindh, Pakistan',
+                                    date: 'Feb 2021 - Sep 2022 • 1 yr 8 mos',
+                                    location: 'Karāchi, Sindh, Pakistan • On-site',
+                                    desc: 'Provided day-to-day IT support, assisted with hardware and software issues, system troubleshooting, and basic technical maintenance for business operations.',
                                     skills: ''
                                 }
                             ].map((job, i) => (
@@ -343,53 +354,60 @@ export default function ProfilePage() {
                         <div className="linkedin-list">
                             {[
                                 {
+                                    name: 'Antigravity Hackathon',
+                                    issuer: 'Google',
+                                    date: 'Issued Sep 2026',
+                                    skills: 'AI Automation, Next.js',
+                                    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-dYsEKF363SqN4U973YG00NXjd7MjWQJp6tEeGE2kOdnjs81rAywCObsvakUHCvGQTnS2fGUbUFSI84d4JGNwcT7jBxBnHdl6Jt-B1g&s'
+                                },
+                                {
                                     name: 'Speed programming',
                                     issuer: 'SMEC\'26',
                                     date: 'Issued Jan 2026',
                                     skills: 'C++, DSA and +1 skill',
-                                    img: '/assets/cerrtificates/smec.jpg'
+                                    img: '/assets/cerrtificates/smec.webp'
                                 },
                                 {
                                     name: 'Wordpress',
                                     issuer: 'NS Training (SMC-PRIVATE) Limited',
                                     date: 'Issued Sep 2024',
                                     skills: 'WordPress and Elementor',
-                                    img: '/assets/cerrtificates/NS-training-wp.jpg'
+                                    img: '/assets/cerrtificates/NS-training-wp.webp'
                                 },
                                 {
                                     name: 'Frontend Developer Intern',
                                     issuer: 'CodeAlpha',
                                     date: 'Issued Sep 2023',
                                     skills: 'Front-End Development',
-                                    img: '/assets/cerrtificates/Codealpha-fronened.jpg'
+                                    img: '/assets/cerrtificates/Codealpha-fronened.webp'
                                 },
                                 {
                                     name: 'Data Structure and Algorithm (DSA)',
                                     issuer: 'CodeAlpha',
                                     date: 'Issued 2023',
                                     skills: 'DSA, Problem Solving',
-                                    img: '/assets/cerrtificates/codealpha-DSA.jpg'
+                                    img: '/assets/cerrtificates/codealpha-DSA.webp'
                                 },
                                 {
                                     name: 'UI/UX Designing',
                                     issuer: 'SMIT',
                                     date: 'Issued 2023',
                                     skills: 'UI/UX, Figma',
-                                    img: '/assets/cerrtificates/SMIT-UIUX.jpg'
+                                    img: '/assets/cerrtificates/SMIT-UIUX.webp'
                                 },
                                 {
                                     name: 'Web Development Course',
                                     issuer: 'AS Community HUB',
                                     date: 'Issued Aug 2024',
                                     skills: 'Web Development',
-                                    img: '/assets/cerrtificates/AS-commuinty-webdev.jpg'
+                                    img: '/assets/cerrtificates/AS-commuinty-webdev.webp'
                                 },
                                 {
                                     name: 'Tailwind CSS Workshop',
                                     issuer: 'Workshop',
                                     date: 'Issued 2024',
                                     skills: 'Tailwind CSS',
-                                    img: '/assets/cerrtificates/tailwind-workshop.jpg'
+                                    img: '/assets/cerrtificates/tailwind-workshop.webp'
                                 }
                             ].map((cert, i) => (
                                 <div key={i} className="linkedin-list-item">
@@ -422,28 +440,6 @@ export default function ProfilePage() {
                 {/* Sidebar Column */}
                 <aside className="profile-aside">
 
-                    {/* People Also Viewed Widget */}
-                    <div className="sidebar-widget">
-                        <h3 className="widget-title" style={{ fontSize: '14px', marginBottom: '16px' }}>People also viewed</h3>
-
-                        <div className="viewer-list">
-                            {[
-                                { name: 'Sarah Johnson', title: 'Senior Frontend Engineer at Google', avatar: 'SJ' },
-                                { name: 'David Chen', title: 'Product Designer at Meta', avatar: 'DC' },
-                                { name: 'Alex Rivera', title: 'Engineering Manager at Netflix', avatar: 'AR' }
-                            ].map((person, i) => (
-                                <div key={i} className="viewer-item">
-                                    <div className="viewer-avatar">{person.avatar}</div>
-                                    <div className="viewer-info">
-                                        <h4>{person.name}</h4>
-                                        <p>{person.title}</p>
-                                        <button className="connect-btn">Connect</button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
                     {/* Social Profiles Widget */}
                     <div className="sidebar-widget">
                         <h3 className="widget-title" style={{ fontSize: '14px', marginBottom: '16px' }}>Social Profiles</h3>
@@ -451,23 +447,15 @@ export default function ProfilePage() {
                         <div className="social-links-list">
                             <a href="https://github.com/IHassanshaikh" target="_blank" rel="noopener noreferrer" className="social-link-item">
                                 <FiGithub size={20} />
-                                <span>@hassan-shaikh</span>
+                                <span>@IHassanshaikh</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/hassan-shaikh-618966253" target="_blank" rel="noopener noreferrer" className="social-link-item">
+                            <a href="https://www.linkedin.com/in/thehassanshaikhh/" target="_blank" rel="noopener noreferrer" className="social-link-item">
                                 <FiLinkedin size={20} />
                                 <span>Hassan Shaikh</span>
                             </a>
-                            <a href="#" className="social-link-item">
-                                <FiFacebook size={20} />
-                                <span>Muhammad Hassan</span>
-                            </a>
-                            <a href="#" className="social-link-item">
+                            <a href="https://www.instagram.com/hassan.techlife/" target="_blank" rel="noopener noreferrer" className="social-link-item">
                                 <FiInstagram size={20} />
-                                <span>hassanshaikh9717</span>
-                            </a>
-                            <a href="#" className="social-link-item">
-                                <FiCode size={20} />
-                                <span>hassanshaikh</span>
+                                <span>@hassan.techlife</span>
                             </a>
                         </div>
                     </div>

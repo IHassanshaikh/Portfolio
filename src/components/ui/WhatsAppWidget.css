@@ -1,0 +1,102 @@
+.whatsapp-widget-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    pointer-events: auto;
+}
+
+.whatsapp-btn {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4),
+                0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6),
+                0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-icon {
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.whatsapp-pulse-ring {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid rgba(37, 211, 102, 0.6);
+    animation: waPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    z-index: 1;
+}
+
+@keyframes waPulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+}
+
+.whatsapp-tooltip {
+    background: rgba(18, 18, 20, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: var(--font-unbounded, sans-serif);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.whatsapp-status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #25D366;
+}
+
+@media (max-width: 850px) {
+    .whatsapp-widget-container {
+        bottom: 6rem; /* Positioned above mobile floating dock */
+        right: 1.25rem;
+    }
+
+    .whatsapp-btn {
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    .whatsapp-icon {
+        font-size: 1.8rem;
+    }
+}

@@ -10,7 +10,7 @@ export default function IdeaExecution() {
             <div className="idea-content">
                 <div className="idea-logo">
                     <Image
-                        src="/assets/logos/logomain.png"
+                        src="/assets/logos/logomain.webp"
                         alt="Logo"
                         width={200}
                         height={80}

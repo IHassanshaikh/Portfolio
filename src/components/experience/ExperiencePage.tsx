@@ -18,7 +18,7 @@ const experiences = [
         date: '2025 - Present',
         title: 'Full Stack and AI Automation Developer',
         company: 'Tech Tide LLC',
-        logo: '/assets/logos/tidetechlogo.png',
+        logo: '/assets/logos/tidetechlogo.webp',
         desc: 'Currently working at Tide Tech as a Developer & Automation Specialist, where my major role is to develop and optimize web applications, automate workflows, and integrate AI-driven solutions to improve efficiency and scalability.',
         details: [
             'React js, Automation and +12 skills'
@@ -29,7 +29,7 @@ const experiences = [
         date: '2024 - 2025',
         title: 'Web Developer Freelancer',
         company: 'Fiverr',
-        logo: '/assets/logos/fiverr_com_logo.jpg',
+        logo: '/assets/logos/fiverr_com_logo.webp',
         desc: 'Worked as a freelance Web Developer focusing on frontend and web development projects.',
         details: [
             'Front-End Development and Web Development'
@@ -40,7 +40,7 @@ const experiences = [
         date: '2023 - 2025',
         title: 'Web Developer',
         company: 'Web Whiz',
-        logo: '/assets/logos/web_whiz_logo.jpg',
+        logo: '/assets/logos/web_whiz_logo.webp',
         desc: 'My major role was to develop and maintain web applications, implement automation solutions, and optimize workflows to enhance efficiency and user experience.',
         details: [
             'React.js, JavaScript and +4 skills'
@@ -51,7 +51,7 @@ const experiences = [
         date: '2022 - 2023',
         title: 'Frontend Developer Intern',
         company: 'CodeAlpha',
-        logo: '/assets/logos/codealpha.jpg',
+        logo: '/assets/logos/codealpha.webp',
         desc: 'Collaborated with a team to develop responsive web applications using React.js and Next.js.',
         details: [
             'Front-End Development, React js and +3 skills'
@@ -62,7 +62,7 @@ const experiences = [
         date: '2021 - 2022',
         title: 'Ex employee of Akbar ali & sons',
         company: 'Akber Ali & Sons',
-        logo: '/assets/logos/akber_ali_sons_logo.jpg',
+        logo: '/assets/logos/akber_ali_sons_logo.webp',
         desc: 'Started my professional journey here.',
         details: []
     }
@@ -70,13 +70,22 @@ const experiences = [
 
 const certificates = [
     {
+        id: 0,
+        name: 'Google Antigravity Hackathon',
+        issuer: 'Google',
+        date: '2026',
+        skills: ['AI', 'Agentic Automation', 'Hackathon'],
+        icon: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-dYsEKF363SqN4U973YG00NXjd7MjWQJp6tEeGE2kOdnjs81rAywCObsvakUHCvGQTnS2fGUbUFSI84d4JGNwcT7jBxBnHdl6Jt-B1g&s" alt="Google Logo" style={{width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%'}} />,
+        link: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-dYsEKF363SqN4U973YG00NXjd7MjWQJp6tEeGE2kOdnjs81rAywCObsvakUHCvGQTnS2fGUbUFSI84d4JGNwcT7jBxBnHdl6Jt-B1g&s'
+    },
+    {
         id: 1,
         name: 'Speed Programming Champion',
         issuer: "SMEC'26 - Tech Competition",
         date: 'Jan 2026',
         skills: ['C++', 'Algorithms', 'DSA'],
         icon: <FiAward />,
-        link: '/assets/cerrtificates/smec.jpg'
+        link: '/assets/cerrtificates/smec.webp'
     },
     {
         id: 2,
@@ -85,7 +94,7 @@ const certificates = [
         date: 'Sep 2024',
         skills: ['WordPress', 'Elementor', 'SEO'],
         icon: <FiCheckSquare />,
-        link: '/assets/cerrtificates/NS-training-wp.jpg'
+        link: '/assets/cerrtificates/NS-training-wp.webp'
     },
     {
         id: 3,
@@ -94,7 +103,7 @@ const certificates = [
         date: 'Sep 2023',
         skills: ['Front-End Development'],
         icon: <FiCode />,
-        link: '/assets/cerrtificates/Codealpha-fronened.jpg'
+        link: '/assets/cerrtificates/Codealpha-fronened.webp'
     },
     {
         id: 4,
@@ -103,7 +112,7 @@ const certificates = [
         date: '2023',
         skills: ['DSA', 'Problem Solving'],
         icon: <FiCpu />,
-        link: '/assets/cerrtificates/codealpha-DSA.jpg'
+        link: '/assets/cerrtificates/codealpha-DSA.webp'
     },
     {
         id: 5,
@@ -112,7 +121,7 @@ const certificates = [
         date: '2023',
         skills: ['UI/UX', 'Figma'],
         icon: <FiAward />,
-        link: '/assets/cerrtificates/SMIT-UIUX.jpg'
+        link: '/assets/cerrtificates/SMIT-UIUX.webp'
     },
     {
         id: 6,
@@ -121,7 +130,7 @@ const certificates = [
         date: 'Aug 2024',
         skills: ['Web Development'],
         icon: <FiGlobe />,
-        link: '/assets/cerrtificates/AS-commuinty-webdev.jpg'
+        link: '/assets/cerrtificates/AS-commuinty-webdev.webp'
     },
     {
         id: 7,
@@ -130,7 +139,7 @@ const certificates = [
         date: '2024',
         skills: ['Tailwind CSS'],
         icon: <FiCode />,
-        link: '/assets/cerrtificates/tailwind-workshop.jpg'
+        link: '/assets/cerrtificates/tailwind-workshop.webp'
     }
 ];
 
@@ -178,7 +187,7 @@ export default function ExperiencePage() {
                         transition={{ duration: 1 }}
                     >
                         <div className="about-image-frame">
-                            <img src="/assets/images/img3.webp" alt="Experience Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <img src="/assets/events/aptech vision.jpeg" alt="Experience Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </div>
                     </motion.div>
                 </section>
@@ -273,17 +282,7 @@ export default function ExperiencePage() {
                                             ))}
                                         </ul>
 
-                                        <div className="achievement-images">
-                                            <div className="achievement-img" style={{ overflow: 'hidden' }}>
-                                                <img src="/assets/images/img4.webp" alt="Achievement 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                            </div>
-                                            <div className="achievement-img" style={{ overflow: 'hidden' }}>
-                                                <img src="/assets/images/img5.webp" alt="Achievement 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                            </div>
-                                            <div className="achievement-img" style={{ overflow: 'hidden' }}>
-                                                <img src="/assets/images/img6.webp" alt="Achievement 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                            </div>
-                                        </div>
+
                                     </motion.div>
                                 )}
                             </AnimatePresence>

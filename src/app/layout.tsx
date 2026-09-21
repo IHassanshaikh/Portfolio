@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
 import FpsMonitorLoader from '@/components/ui/FpsMonitorLoader';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -13,9 +14,9 @@ const unbounded = Unbounded({ subsets: ["latin"], variable: '--font-unbounded' }
 
 export const metadata: Metadata = {
   title: "Hassan Shaikh | Portfolio",
-  description: "Full-Stack and AI Automation Developer",
+  description: "Full-Stack & AI Automation Developer | 50+ Projects Delivered | React, WordPress, Shopify | Building Scalable Web Systems & AI-Powered Automations",
   icons: {
-    icon: '/assets/logos/logomain.png',
+    icon: '/assets/logos/logomain.webp',
   },
 };
 
@@ -36,6 +37,7 @@ export default function RootLayout({
             {children}
           </div>
           <Footer />
+          <WhatsAppWidget />
           <SpeedInsights />
           {/* Diagnostic FPS monitor - enable by setting `window.__ENABLE_FPS = true` in the console */}
           <FpsMonitorLoader />

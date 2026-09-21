@@ -67,7 +67,7 @@ export default function BentoSection() {
                             <Image src="/assets/images/img4.webp" alt="Profile" width={110} height={110} className="object-cover" />
                         </motion.div>
                         <motion.div whileHover={{ scale: 1.1, zIndex: 10 }} className="partnership-img-ring ring-3">
-                            <Image src="/assets/images/img6.webp" alt="Project 2" width={90} height={90} className="object-cover" />
+                            <Image src="/assets/events/Ai baithak.jpeg" alt="AI Baithak Event" width={90} height={90} className="object-cover" />
                         </motion.div>
                     </div>
                     <div className="partnership-footer">

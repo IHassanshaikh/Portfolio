@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './WorkPage.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 import { specialtiesData } from '@/data/specialties';
 
@@ -57,26 +58,27 @@ export default function WorkPage() {
                             <motion.div
                                 key={project.id}
                                 className="work-card-unique"
-                                layout
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.4 }}
                             >
                                 <div className="work-card-image">
-                                    <img 
+                                    <Image 
                                         src={project.image} 
                                         alt={project.title}
                                         className="work-project-img"
+                                        width={800}
+                                        height={1600}
                                         onError={(e) => {
-                                            (e.target as HTMLImageElement).src = '/assets/projects/placeholder.jpg';
+                                            (e.target as HTMLImageElement).src = '/assets/projects/placeholder.webp';
                                         }}
                                     />
                                 </div>
                                 <div className="work-card-info">
                                     <span className="work-card-category">{project.category}</span>
                                     <h3 className="work-card-title">
-                                        {project.liveLink ? (
+                                        {project.liveLink && project.liveLink !== "private" ? (
                                             <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                                                 {project.title}
                                             </a>

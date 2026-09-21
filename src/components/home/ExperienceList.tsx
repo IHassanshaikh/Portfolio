@@ -34,11 +34,11 @@ export default function ExperienceList() {
                 <div className="exp-list-wrapper">
                     {/* Item 1 */}
                     <div className="exp-list-item">
-                        <div className="exp-date">2025 - Present</div>
+                        <div className="exp-date">Feb 2025 - Present</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/tidetechlogo.png"
-                                alt="Tech Tide LLC Logo"
+                                src="/assets/logos/tidetechlogo.webp"
+                                alt="TechTide Co. Logo"
                                 width={60}
                                 height={60}
                                 priority
@@ -46,30 +46,30 @@ export default function ExperienceList() {
                         </div>
                         <div className="exp-details">
                             <h3 className="exp-role">Full-Stack & AI Automation Developer</h3>
-                            <div className="exp-company">Tech Tide LLC</div>
+                            <div className="exp-company">TechTide Co.</div>
                             <ul className="exp-points">
-                                <li>Developing scalable web applications</li>
-                                <li>Building automation workflows</li>
-                                <li>Integrating AI solutions into digital platforms</li>
-                                <li>Optimizing performance and backend systems</li>
-                                <li>Building APIs and automation tools for business processes</li>
+                                <li>Developing scalable web applications and eCommerce platforms</li>
+                                <li>Building AI & agentic automation workflows</li>
+                                <li>Integrating APIs, AI models, and chatbots into web apps</li>
+                                <li>Managing deployment, hosting, and VPS environments</li>
+                                <li>Building automation tools for real-world business processes</li>
                             </ul>
                         </div>
                     </div>
 
                     {/* Item 2 */}
                     <div className="exp-list-item">
-                        <div className="exp-date">2024 - 2025</div>
+                        <div className="exp-date">Aug 2024 - Sep 2025</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/fiverr_com_logo.jpg"
+                                src="/assets/logos/fiverr_com_logo.webp"
                                 alt="Fiverr Logo"
                                 width={60}
                                 height={60}
                             />
                         </div>
                         <div className="exp-details">
-                            <h3 className="exp-role">Web Developer (Freelancer)</h3>
+                            <h3 className="exp-role">Freelance Web Developer</h3>
                             <div className="exp-company">Fiverr</div>
                             <ul className="exp-points">
                                 <li>Developed responsive websites for global clients</li>
@@ -81,10 +81,10 @@ export default function ExperienceList() {
 
                     {/* Item 3 */}
                     <div className="exp-list-item">
-                        <div className="exp-date">2023 - 2025</div>
+                        <div className="exp-date">Feb 2023 - Jan 2025</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/web_whiz_logo.jpg"
+                                src="/assets/logos/web_whiz_logo.webp"
                                 alt="Web Whiz Logo"
                                 width={60}
                                 height={60}
@@ -103,10 +103,10 @@ export default function ExperienceList() {
 
                     {/* Item 4 */}
                     <div className="exp-list-item">
-                        <div className="exp-date">2022 - 2023</div>
+                        <div className="exp-date">Dec 2023 - Nov 2024</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/codealpha.jpg"
+                                src="/assets/logos/codealpha.webp"
                                 alt="CodeAlpha Logo"
                                 width={60}
                                 height={60}
@@ -124,18 +124,18 @@ export default function ExperienceList() {
 
                     {/* Item 5 */}
                     <div className="exp-list-item">
-                        <div className="exp-date">2021 - 2022</div>
+                        <div className="exp-date">Feb 2021 - Sep 2022</div>
                         <div className="exp-logo">
                             <Image
-                                src="/assets/logos/akber_ali_sons_logo.jpg"
+                                src="/assets/logos/akber_ali_sons_logo.webp"
                                 alt="Akbar Ali & Sons Logo"
                                 width={60}
                                 height={60}
                             />
                         </div>
                         <div className="exp-details">
-                            <h3 className="exp-role">Employee</h3>
-                            <div className="exp-company">Akbar Ali & Sons</div>
+                            <h3 className="exp-role">IT Support</h3>
+                            <div className="exp-company">Akber Ali & Sons</div>
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ export default function ExperienceList() {
                             <div className="edu-header">
                                 <div className="edu-logo">
                                     <Image
-                                        src="/assets/logos/iqra-uni-logo.jpg"
+                                        src="/assets/logos/iqra-uni-logo.webp"
                                         alt="Iqra University Logo"
                                         width={50}
                                         height={50}
