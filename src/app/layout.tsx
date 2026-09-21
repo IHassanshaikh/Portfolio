@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
+import AIAssistantWidget from "@/components/ui/AIAssistantWidget";
+import CommandPalette from "@/components/ui/CommandPalette";
 import FpsMonitorLoader from '@/components/ui/FpsMonitorLoader';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -38,6 +40,8 @@ export default function RootLayout({
           </div>
           <Footer />
           <WhatsAppWidget />
+          <AIAssistantWidget />
+          <CommandPalette />
           <SpeedInsights />
           {/* Diagnostic FPS monitor - enable by setting `window.__ENABLE_FPS = true` in the console */}
           <FpsMonitorLoader />

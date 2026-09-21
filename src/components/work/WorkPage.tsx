@@ -6,8 +6,10 @@ import Image from 'next/image';
 
 import { specialtiesData } from '@/data/specialties';
 
+import ProjectModal, { ProjectData } from '@/components/ui/ProjectModal';
+
 // Flatten all projects from specialtiesData into a single array
-const allProjects = specialtiesData.flatMap((specialty) => 
+const allProjects: ProjectData[] = specialtiesData.flatMap((specialty) => 
     specialty.projects.map((project, pIdx) => ({
         ...project,
         id: `${specialty.slug}-${pIdx}`,
@@ -19,6 +21,7 @@ const categories = ['All', ...specialtiesData.map(s => s.title)];
 
 export default function WorkPage() {
     const [filter, setFilter] = useState('All');
+    const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
 
     const filteredProjects = filter === 'All'
         ? allProjects
@@ -35,7 +38,7 @@ export default function WorkPage() {
                     >
                         Selected <span className="glow-text">Work</span>
                     </motion.h1>
-                    <p className="text-muted">A collection of projects where design meets functionality.</p>
+                    <p className="text-muted">A collection of projects where design meets functionality. Click any card to view detailed case study.</p>
                 </div>
             </section>
 
@@ -54,7 +57,7 @@ export default function WorkPage() {
 
                 <div className="work-grid-unique">
                     <AnimatePresence mode="popLayout">
-                        {filteredProjects.map((project, index) => (
+                        {filteredProjects.map((project) => (
                             <motion.div
                                 key={project.id}
                                 className="work-card-unique"
@@ -62,6 +65,8 @@ export default function WorkPage() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.4 }}
+                                onClick={() => setSelectedProject(project)}
+                                style={{ cursor: 'pointer' }}
                             >
                                 <div className="work-card-image">
                                     <Image 
@@ -77,15 +82,7 @@ export default function WorkPage() {
                                 </div>
                                 <div className="work-card-info">
                                     <span className="work-card-category">{project.category}</span>
-                                    <h3 className="work-card-title">
-                                        {project.liveLink && project.liveLink !== "private" ? (
-                                            <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                                                {project.title}
-                                            </a>
-                                        ) : (
-                                            project.title
-                                        )}
-                                    </h3>
+                                    <h3 className="work-card-title">{project.title}</h3>
                                     <p className="work-card-desc">{project.desc}</p>
                                     <div className="work-card-tags">
                                         {project.tags.map((tag, tIndex) => (
@@ -98,6 +95,9 @@ export default function WorkPage() {
                     </AnimatePresence>
                 </div>
             </div>
+
+            {/* Case Study Modal */}
+            <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
         </main>
     );
 }
